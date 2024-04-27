@@ -29,12 +29,13 @@
       name = "Ughur Alakbarov";
       username = "ugura";
       layout = "eu";
+      shell = pkgs.zsh;
     };
   in {
-    nixosConfigurations = {
+    nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
       system = systemSettings.system;
 
-      modules = [.profiles/personal/configuration.nix];
+      modules = [./profiles/personal/configuration.nix];
 
       specialArgs = {
         inherit systemSettings;

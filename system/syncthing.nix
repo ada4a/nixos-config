@@ -1,4 +1,4 @@
-{userSettings}: {
+{userSettings, ...}: {
   services.syncthing = {
     enable = true;
     user = userSettings.username;

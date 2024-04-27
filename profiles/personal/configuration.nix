@@ -58,10 +58,10 @@
   services.xserver.enable = true;
 
   # Configure keymap in X11
-  servies.xserver.layout = "eu, ru";
+  services.xserver.xkb.layout = "eu,ru";
 
   # Enable KDE Plasma
-  services.xserver = {
+  services = {
     desktopManager.plasma6.enable = true;
     displayManager.sddm.enable = true;
     displayManager.defaultSession = "plasma";
@@ -93,9 +93,11 @@
     shell = userSettings.shell;
     hashedPassword = "$y$j9T$8ujHxGIKBXZLj.L/UGKWc0$PFKbDL1Bl2kr9Ovx.NVNw7FkIOHLZgF7OQ0eIwEBx66";
   };
+  # don't forget to actually enable the user shell!
+  programs.zsh.enable = true;
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin = {
+  services.displayManager.autoLogin = {
     enable = true;
     user = userSettings.username;
   };
@@ -109,7 +111,7 @@
     # CLI tools
     bat
     eza
-    dust
+    du-dust
     fastmod
     fzf
     git
@@ -136,8 +138,8 @@
   # Envvars
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = 1;
-    MOZ_DBUS_REMOTE = 1;
+    MOZ_ENABLE_WAYLAND = "1";
+    MOZ_DBUS_REMOTE = "1";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
