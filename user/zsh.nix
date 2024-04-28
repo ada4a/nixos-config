@@ -13,6 +13,7 @@
       ls = "eza";
       top = "htop";
       n = "nvim";
+      up = "sudo zypper dup && flatpak update && cargo install-update";
       v = "nvim";
       vi = "nvim";
     };
