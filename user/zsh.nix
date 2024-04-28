@@ -1,6 +1,11 @@
-{ ... }: {
+{ config, ... }: {
   programs.zsh = {
     enable = true;
+    syntaxHighlighting.enable = true;
+    history = {
+        path = "${config.xdg.stateHome}/zsh/history";
+        ignoreAllDups = true;
+    };
     shellAliases = {
       cat = "bat";
       cd = "z";
