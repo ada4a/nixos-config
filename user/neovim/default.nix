@@ -5,6 +5,8 @@
   pkgs,
   ...
 }: {
+  # lazygit
+  home.packages = [pkgs.lazygit];
   programs.neovim = {
     enable = true;
 
