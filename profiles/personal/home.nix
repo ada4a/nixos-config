@@ -6,9 +6,9 @@
   ...
 }: {
   home = {
-    username = userSettings.username;
+    inherit (userSettings) username;
     homeDirectory = "/home/" + userSettings.username;
-    stateVersion = systemSettings.stateVersion; # Please read the comment before changing.
+    inherit (systemSettings) stateVersion; # Please read the comment before changing.
   };
 
   services.home-manager.autoUpgrade = {

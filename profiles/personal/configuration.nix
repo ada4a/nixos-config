@@ -90,7 +90,7 @@
     isNormalUser = true;
     description = userSettings.name;
     extraGroups = ["networkmanager" "wheel"];
-    shell = userSettings.shell;
+    inherit (userSettings) shell;
     hashedPassword = "$y$j9T$8ujHxGIKBXZLj.L/UGKWc0$PFKbDL1Bl2kr9Ovx.NVNw7FkIOHLZgF7OQ0eIwEBx66";
   };
   # don't forget to actually enable the user shell!
@@ -163,5 +163,5 @@
   # networking.firewall.enable = false;
 
   # It's ok to leave this unchanged for compatibililty reasons
-  system.stateVersion = systemSettings.stateVersion;
+  system = {inherit (systemSettings) stateVersion;};
 }
