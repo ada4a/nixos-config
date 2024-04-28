@@ -42,24 +42,24 @@
   # Install Nix packages into the environment
   home.packages = with pkgs; [
     # Flatpaks
-    #anki
-    #ausweisapp
-    #bitwarden
-    #filelight
-    #discord
-    #flatpak
-    #floorp
-    #keepassxc
-    #krename
-    #obsidian
-    #sqlitebrowser
-    #telegram-desktop
-    #ticktick
-    #thunderbird
-    #spotify
-    #tex-match
-    #vlc
-    #vscodium
+    anki
+    ausweisapp
+    bitwarden
+    filelight
+    discord
+    flatpak
+    floorp
+    keepassxc
+    krename
+    obsidian
+    sqlitebrowser
+    telegram-desktop
+    ticktick
+    thunderbird
+    spotify
+    tex-match
+    vlc
+    vscodium
 
     # CLI
     espanso-wayland
@@ -68,8 +68,6 @@
     clippy
     rustc
 
-    #only listed here while I'm not on NixOS
-    fastmod
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -102,15 +100,11 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
-    MOZ_ENABLE_WAYLAND = 1;
-    MOZ_DBUS_REMOTE = 1;
   };
 
   home.sessionPath = [
     "${config.xdg.dataHome}/flatpak/exports/share/applications"
-    "${config.home.homeDirectory}/.nix-profile/bin"
     "${config.xdg.dataHome}/nvim/mason/bin"
-    "/nix/var/nix/profiles/default/bin"
   ];
 
   home.keyboard = {
