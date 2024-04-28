@@ -87,6 +87,7 @@ alejandra
     "${config.xdg.dataHome}/flatpak/exports/share/applications"
     "${config.home.homeDirectory}/.nix-profile/bin"
     "${config.xdg.dataHome}/nvim/mason/bin"
+    "/nix/var/nix/profiles/default/bin"
   ];
 
   home.keyboard = {
