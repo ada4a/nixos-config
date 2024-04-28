@@ -23,6 +23,7 @@
       hostname = "magicbook";
       timezone = "Europe/Berlin";
       locale = "en_IE.UTF-8";
+      stateVersion = "24.05";
     };
 
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
@@ -57,6 +58,7 @@
       # Optionally use extraSpecialArgs
       # to pass through arguments to home.nix
       extraSpecialArgs = {
+        inherit systemSettings;
         inherit userSettings;
       };
     };

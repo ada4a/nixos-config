@@ -156,5 +156,5 @@
   # networking.firewall.enable = false;
 
   # It's ok to leave this unchanged for compatibililty reasons
-  system.stateVersion = "23.11";
+  system.stateVersion = systemSettings.stateVersion;
 }

@@ -1,13 +1,14 @@
 {
   config,
   pkgs,
+  systemSettings,
   userSettings,
   ...
 }: {
   home = {
     username = userSettings.username;
     homeDirectory = "/home/" + userSettings.username;
-    stateVersion = "23.11"; # Please read the comment before changing.
+    stateVersion = systemSettings.stateVersion; # Please read the comment before changing.
   };
 
   services.home-manager.autoUpgrade = {
