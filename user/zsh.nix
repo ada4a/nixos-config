@@ -1,6 +1,7 @@
 { config, ... }: {
   programs.zsh = {
     enable = true;
+    package = pkgs.zsh;
     syntaxHighlighting.enable = true;
     history = {
         path = "${config.xdg.stateHome}/zsh/history";
