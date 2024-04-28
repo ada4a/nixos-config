@@ -191,7 +191,7 @@
             cpp
             rust
             python
-            go
+            nix
           ]))
         .dependencies;
     };
