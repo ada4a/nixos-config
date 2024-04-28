@@ -28,6 +28,12 @@
     '';
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   networking.hostName = systemSettings.hostname;
   networking.networkmanager.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -102,6 +108,7 @@
     eza
     dust
     fastmod
+    fzf
     git
     htop
     hyfetch
