@@ -15,6 +15,13 @@
     frequency = "weekly";
   };
 
+  nix = {
+    package = pkgs.nix;
+    settings = {
+      experimental-features = "nix-command flakes";
+    };
+  };
+
   nixpkgs.config.allowUnfree = true; # nix-community/home-manager/#463
 
   imports = [
