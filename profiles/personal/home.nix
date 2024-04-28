@@ -102,10 +102,6 @@
     BROWSER = "firefox";
   };
 
-  home.sessionPath = [
-    "${config.xdg.dataHome}/flatpak/exports/share/applications"
-  ];
-
   home.keyboard = {
     layout = "eu,ru";
   };
