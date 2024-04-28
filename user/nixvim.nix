@@ -17,7 +17,7 @@
       relativenumber = true;
       undodir = "./undo";
       undofile = true;
-      fillchars = { eob = " "; };
+      fillchars = {eob = " ";};
       tabstop = 2;
       shiftwidth = 2;
       expandtab = false;
@@ -48,10 +48,10 @@
         enable = true;
         autoEnableSources = true;
         settings.sources = [
-          { name = "nvim_lsp"; }
-          { name = "path"; }
-          { name = "buffer"; }
-          { name = "luasnip"; }
+          {name = "nvim_lsp";}
+          {name = "path";}
+          {name = "buffer";}
+          {name = "luasnip";}
         ];
         settings.mapping = {
           "<CR>" = "cmp.mapping.confirm({ select = true })";
@@ -79,10 +79,10 @@
       lint = {
         enable = true;
         lintersByFt = {
-          text = [ "vale" ];
-          json = [ "jq" ];
-          markdown = [ "vale" ];
-          nix = [ "alejandra" ];
+          text = ["vale"];
+          json = ["jq"];
+          markdown = ["vale"];
+          nix = ["alejandra"];
         };
       };
       lsp = {
@@ -116,12 +116,12 @@
           lualine_z = null;
         };
         sections = {
-          lualine_a = [ "mode" ];
-          lualine_b = [ "filename" "branch" ];
-          lualine_c = [ "fileformat" ];
-          lualine_x = [ "progress" ];
-          lualine_y = [ "filetype" ];
-          lualine_z = [ "location" ];
+          lualine_a = ["mode"];
+          lualine_b = ["filename" "branch"];
+          lualine_c = ["fileformat"];
+          lualine_x = ["progress"];
+          lualine_y = ["filetype"];
+          lualine_z = ["location"];
         };
       };
       nvim-tree = {

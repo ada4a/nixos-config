@@ -1,11 +1,15 @@
-{ config, ... }: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     package = pkgs.zsh;
     syntaxHighlighting.enable = true;
     history = {
-        path = "${config.xdg.stateHome}/zsh/history";
-        ignoreAllDups = true;
+      path = "${config.xdg.stateHome}/zsh/history";
+      ignoreAllDups = true;
     };
     shellAliases = {
       cat = "bat";
@@ -28,7 +32,6 @@
         "systemd"
         "zoxide"
       ];
-
     };
   };
 }

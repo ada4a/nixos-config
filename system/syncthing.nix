@@ -1,5 +1,4 @@
-{ userSettings }: {
-
+{userSettings}: {
   services.syncthing = {
     enable = true;
     user = userSettings.username;
@@ -19,11 +18,11 @@
       folders = {
         "Obsidian" = {
           path = "~/Obsidian";
-          devices = [ "samsung" "ipad" ];
+          devices = ["samsung" "ipad"];
         };
         "Library" = {
           path = "~/Documents/Library";
-          devices = [ "samsung" "ipad" ];
+          devices = ["samsung" "ipad"];
         };
       };
     };

@@ -15,50 +15,54 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }:
-    let
-      systemSettings = {
-        system = "x86_64-linux";
-        bootMountPath = "/boot";
-        hostname = "magicbook";
-        timezone = "Europe/Berlin";
-        locale = "en_IE.UTF-8";
-      };
+  outputs = {
+    nixpkgs,
+    home-manager,
+    nixvim,
+    ...
+  }: let
+    systemSettings = {
+      system = "x86_64-linux";
+      bootMountPath = "/boot";
+      hostname = "magicbook";
+      timezone = "Europe/Berlin";
+      locale = "en_IE.UTF-8";
+    };
 
-      pkgs = nixpkgs.legacyPackages.${systemSettings.system};
-      
-      userSettings = {
-        email = "ugur.alekperov@gmail.com";
-        name = "Ughur Alakbarov";
-        username = "ugura";
-      };
-    in
-    {
-      nixosConfigurations = {
-        system = systemSettings.system;
+    pkgs = nixpkgs.legacyPackages.${systemSettings.system};
 
-        modules = [ .profiles/personal/configuration.nix ];
+    userSettings = {
+      email = "ugur.alekperov@gmail.com";
+      name = "Ughur Alakbarov";
+      username = "ugura";
+      layout = "eu";
+    };
+  in {
+    nixosConfigurations = {
+      system = systemSettings.system;
 
-        specialArgs = {
-          inherit systemSettings;
-          inherit userSettings;
-        };
-      };
-      homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      modules = [.profiles/personal/configuration.nix];
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
-          ./profiles/personal/home.nix
-          nixvim.homeManagerModules.nixvim
-        ];
-
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
-        extraSpecialArgs = {
-          inherit userSettings;
-        };
+      specialArgs = {
+        inherit systemSettings;
+        inherit userSettings;
       };
     };
+    homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
+
+      # Specify your home configuration modules here, for example,
+      # the path to your home.nix.
+      modules = [
+        ./profiles/personal/home.nix
+        nixvim.homeManagerModules.nixvim
+      ];
+
+      # Optionally use extraSpecialArgs
+      # to pass through arguments to home.nix
+      extraSpecialArgs = {
+        inherit userSettings;
+      };
+    };
+  };
 }

@@ -1,4 +1,9 @@
-{ config, pkgs, userSettings, ... }: {
+{
+  config,
+  pkgs,
+  userSettings,
+  ...
+}: {
   home = {
     username = userSettings.username;
     homeDirectory = "/home/" + userSettings.username;
@@ -8,7 +13,7 @@
   nixpkgs.config.allowUnfree = true; # nix-community/home-manager/#463
 
   imports = [
-    (import ../../user/git.nix { inherit userSettings; })
+    (import ../../user/git.nix {inherit userSettings;})
     ../../user/hyfetch.nix
     #../../user/nixvim.nix
     #../../user/nix-direnv.nix
@@ -44,9 +49,9 @@
     rustc
     rustup
 
-#only listed here while I'm not on NixOS
-fastmod
-alejandra
+    #only listed here while I'm not on NixOS
+    fastmod
+    alejandra
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -96,7 +101,7 @@ alejandra
 
   xdg.mimeApps.defaultApplications = {
     #"text/*" = ["nixvim.desktop"];
-    "application/pdf" = [ "okular.desktop" ];
+    "application/pdf" = ["okular.desktop"];
   };
 
   # Let Home Manager install and manage itself.
