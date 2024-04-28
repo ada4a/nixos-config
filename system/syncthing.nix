@@ -16,8 +16,8 @@
         };
       };
       folders = {
-        "Obsidian" = {
-          path = "~/Obsidian";
+        "Obsidian - main" = {
+          path = "~/Obsidian/main";
           devices = ["samsung" "ipad"];
         };
         "Library" = {
