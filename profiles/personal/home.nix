@@ -44,8 +44,6 @@
     cargo
     rustc
 
-    gurobi
-
 #only listed here while I'm not on NixOS
 fastmod
 alejandra
