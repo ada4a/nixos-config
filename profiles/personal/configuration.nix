@@ -47,8 +47,7 @@
   time.timeZone = systemSettings.timezone;
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings.LC_ALL = systemSettings.locale;
+  i18n.defaultLocale = systemSettings.locale;
 
   # Wayland
   security.polkit.enable = true;
