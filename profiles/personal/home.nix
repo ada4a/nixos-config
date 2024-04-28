@@ -34,7 +34,7 @@
     (import ../../user/git.nix {inherit userSettings;})
     ../../user/espanso.nix
     ../../user/hyfetch.nix
-    ../../user/neovim
+    ../../user/neovim.nix
     #../../user/nix-direnv.nix
     ../../user/zsh.nix
   ];

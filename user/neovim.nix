@@ -203,5 +203,8 @@
   # '.config/nvim/lua' this is the left hand side value of code below
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
   # NOTE 5: Finish the setup for the lsp's in lua/plugins/lsp.lua
-  xdg.configFile."nvim/lua".source = ./lua;
+
+  # unlike the way Shiva does it, just leave the nvim config where it was.
+  # This makes LazyVim autoreload config, fixes <leader>fc and possibly more
+  # xdg.configFile."nvim/lua".source = ./lua;
 }
