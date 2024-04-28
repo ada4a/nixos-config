@@ -121,7 +121,6 @@
     wget
     zoxide
 
-    alejandra
     home-manager
     sccache
     syncthing

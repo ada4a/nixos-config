@@ -34,7 +34,7 @@
     (import ../../user/git.nix {inherit userSettings;})
     ../../user/espanso.nix
     ../../user/hyfetch.nix
-    #../../user/nixvim.nix
+    ../../user/neovim
     #../../user/nix-direnv.nix
     ../../user/zsh.nix
   ];
@@ -71,7 +71,6 @@
 
     #only listed here while I'm not on NixOS
     fastmod
-    alejandra
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
