@@ -89,6 +89,7 @@
     isNormalUser = true;
     description = userSettings.name;
     extraGroups = ["networkmanager" "wheel"];
+    hashedPassword = "$y$j9T$8ujHxGIKBXZLj.L/UGKWc0$PFKbDL1Bl2kr9Ovx.NVNw7FkIOHLZgF7OQ0eIwEBx66";
   };
 
   # Enable automatic login for the user.
