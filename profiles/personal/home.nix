@@ -107,7 +107,7 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-    #"text/*" = ["nixvim.desktop"];
+    "text/*" = ["neovim.desktop"];
     "application/pdf" = ["okular.desktop"];
   };
 
