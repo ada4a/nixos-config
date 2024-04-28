@@ -1,9 +1,4 @@
-{ config
-, pkgs
-, userSettings
-, ...
-}:
-{
+{ config, pkgs, userSettings, ... }: {
   home = {
     username = userSettings.username;
     homeDirectory = "/home/" + userSettings.username;
@@ -16,6 +11,7 @@
     (import ../../user/git.nix { inherit userSettings; })
     ../../user/hyfetch.nix
     #../../user/nixvim.nix
+    ../../user/nix-direnv.nix
     ../../user/zsh.nix
   ];
 
