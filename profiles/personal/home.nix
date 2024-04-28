@@ -84,6 +84,7 @@ alejandra
   home.sessionPath = [
     "${config.xdg.dataHome}/flatpak/exports/share/applications"
     "${config.home.homeDirectory}/.nix-profile/bin"
+    "${config.xdg.dataHome}/nvim/mason/bin"
   ];
 
   home.keyboard = {
