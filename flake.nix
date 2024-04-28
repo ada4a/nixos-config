@@ -19,7 +19,7 @@
       hostname = "magicbook";
       timezone = "Europe/Berlin";
       locale = "en_IE.UTF-8";
-      stateVersion = "24.05";
+      stateVersion = "23.11";
     };
 
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
