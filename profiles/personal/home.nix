@@ -11,7 +11,7 @@
     (import ../../user/git.nix { inherit userSettings; })
     ../../user/hyfetch.nix
     #../../user/nixvim.nix
-    ../../user/nix-direnv.nix
+    #../../user/nix-direnv.nix
     ../../user/zsh.nix
   ];
 
