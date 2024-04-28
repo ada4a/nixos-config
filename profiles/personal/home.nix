@@ -57,7 +57,6 @@
     #ticktick
     #thunderbird
     #spotify
-    #steam
     #tex-match
     #vlc
     #vscodium
