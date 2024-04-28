@@ -65,8 +65,9 @@
     # CLI
     espanso-wayland
 
+    cargo
+    clippy
     rustc
-    rustup
 
     #only listed here while I'm not on NixOS
     fastmod
