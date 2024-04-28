@@ -14,6 +14,7 @@
 
   imports = [
     (import ../../user/git.nix {inherit userSettings;})
+    ../../user/espanso.nix
     ../../user/hyfetch.nix
     #../../user/nixvim.nix
     #../../user/nix-direnv.nix
