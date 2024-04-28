@@ -10,6 +10,11 @@
     stateVersion = "23.11"; # Please read the comment before changing.
   };
 
+  services.home-manager.autoUpgrade = {
+    enable = true;
+    frequency = "weekly";
+  };
+
   nixpkgs.config.allowUnfree = true; # nix-community/home-manager/#463
 
   imports = [
