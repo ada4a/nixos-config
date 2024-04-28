@@ -125,7 +125,6 @@
     zoxide
 
     home-manager
-    sccache
     syncthing
     wl-clipboard
   ];
