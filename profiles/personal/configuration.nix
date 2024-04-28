@@ -127,6 +127,8 @@
     home-manager
     syncthing
     wl-clipboard
+
+    firefox
   ];
 
   # VM stuff
