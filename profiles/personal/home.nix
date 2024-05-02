@@ -49,7 +49,7 @@
     filelight
     discord
     flatpak
-    floorp
+    #floorp
     keepassxc
     krename
     obsidian
