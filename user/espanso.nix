@@ -53,11 +53,11 @@
         }
         {
           trigger = ";pmail";
-          replace = "ugur.alekperov@protonmail.com";
+          replace = userSettings.pmail;
         }
         {
           trigger = ";rmail";
-          replace = "ughur.alakbarov@rwth-aachen.de";
+          replace = userSettings.rmail;
         }
       ];
       webarchive.matches = [

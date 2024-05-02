@@ -26,6 +26,8 @@
 
     userSettings = {
       gmail = "ugur.alekperov@gmail.com";
+      rmail = "ughur.alakbarov@rwth-aachen.de";
+      pmail = "ugur.alekperov@protonmail.com";
       name = "Ughur Alakbarov";
       username = "ugura";
       layout = "eu";
