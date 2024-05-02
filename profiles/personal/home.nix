@@ -33,6 +33,7 @@
   imports = [
     (import ../../user/git.nix {inherit userSettings;})
     ../../user/espanso.nix
+    #../../user/floorp.nix
     ../../user/hyfetch.nix
     ../../user/neovim.nix
     #../../user/nix-direnv.nix
