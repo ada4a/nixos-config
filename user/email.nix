@@ -1,7 +1,7 @@
 {userSettings, ...}: let
   signature = ''
     Mit freundlichen Grüßen
-    Ughur Alakbarov
+    ${userSettings.name}
   '';
 in {
   accounts.email.accounts = {
