@@ -25,7 +25,7 @@
     pkgs = nixpkgs.legacyPackages.${systemSettings.system};
 
     userSettings = {
-      email = "ugur.alekperov@gmail.com";
+      gmail = "ugur.alekperov@gmail.com";
       name = "Ughur Alakbarov";
       username = "ugura";
       layout = "eu";

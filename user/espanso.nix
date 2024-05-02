@@ -49,7 +49,7 @@
       emails.matches = [
         {
           trigger = ";gmail";
-          replace = userSettings.email;
+          replace = userSettings.gmail;
         }
         {
           trigger = ";pmail";
