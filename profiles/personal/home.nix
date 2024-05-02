@@ -38,6 +38,7 @@
     ../../user/hyfetch.nix
     ../../user/neovim.nix
     #../../user/nix-direnv.nix
+    ../../user/thunderbird.nix
     ../../user/zsh.nix
   ];
 
@@ -57,7 +58,6 @@
     sqlitebrowser
     telegram-desktop
     ticktick
-    thunderbird
     spotify
     tex-match
     vlc
