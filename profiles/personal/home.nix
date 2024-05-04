@@ -64,7 +64,6 @@
     vscodium
 
     # CLI
-    espanso-wayland
     nix-search-cli
 
     cargo
