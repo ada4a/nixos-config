@@ -36,6 +36,7 @@
     ../../user/espanso.nix
     #../../user/floorp.nix
     ../../user/hyfetch.nix
+    ../../user/kdeconnect.nix
     ../../user/neovim.nix
     #../../user/nix-direnv.nix
     ../../user/thunderbird.nix
