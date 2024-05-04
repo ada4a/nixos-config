@@ -65,6 +65,7 @@
 
     # CLI
     espanso-wayland
+    nix-search-cli
 
     cargo
     clippy
