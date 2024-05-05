@@ -31,16 +31,9 @@
   nixpkgs.config.allowUnfree = true; # nix-community/home-manager/#463
 
   imports = [
-    (import ../../user/git.nix {inherit userSettings;})
+    ../../user/apps
+    (import ../../user/dev {inherit userSettings;})
     ../../user/email.nix
-    ../../user/espanso.nix
-    #../../user/floorp.nix
-    ../../user/hyfetch.nix
-    ../../user/kdeconnect.nix
-    ../../user/neovim.nix
-    #../../user/nix-direnv.nix
-    ../../user/thunderbird.nix
-    ../../user/zsh.nix
   ];
 
   # Install Nix packages into the environment
