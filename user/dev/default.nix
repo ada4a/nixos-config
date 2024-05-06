@@ -4,6 +4,7 @@
     ./rust.nix
     ./neovim.nix
     (import ./git.nix {inherit userSettings;})
+    ./zellij.nix
     ./zsh.nix
   ];
 }
