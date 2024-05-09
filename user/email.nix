@@ -11,6 +11,14 @@ in {
       primary = true;
       realName = userSettings.name;
       signature.text = signature;
+      imap = {
+        port = 993;
+        tls.enable = true;
+      };
+      smtp = {
+        port = 465;
+        tls.enable = true;
+      };
     };
     "pmail" = {
       address = userSettings.pmail;
