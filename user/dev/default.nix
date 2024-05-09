@@ -1,4 +1,8 @@
-{userSettings, ...}: {
+{
+  userSettings,
+  pkgs,
+  ...
+}: {
   imports = [
     ./nix-direnv.nix
     ./rust.nix
@@ -9,4 +13,6 @@
     #./zellij.nix
     ./zsh.nix
   ];
+
+  home.packages = with pkgs; [lldb];
 }
