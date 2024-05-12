@@ -4,6 +4,6 @@
     #./floorp.nix
     ./hyfetch.nix
     ./kdeconnect.nix
-    #./thunderbird.nix
+    ./thunderbird.nix
   ];
 }
