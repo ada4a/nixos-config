@@ -27,8 +27,24 @@ in {
     };
     "rmail" = {
       address = userSettings.rmail;
+      userName = "wz504737@rwth-aachen.de";
       realName = userSettings.name;
       signature.text = signature;
+      # incoming server
+      imap = {
+        host = "mail.rwth-aachen.de";
+        port = 993;
+        tls.enable = true;
+      };
+      # outgoing server
+      smtp = {
+        host = "mail.rwth-aachen.de";
+        port = 587;
+        tls = {
+          enable = true;
+          useStartTls = true;
+        };
+      };
     };
   };
 }

@@ -5,19 +5,8 @@
       isDefault = true;
     };
   };
-  # accounts.email.accounts = {
-  #   "gmail".thunderbird.enable = true;
-  #   "rmail" = {
-  #     thunderbird.enable = true;
-  #     # outgoing server
-  #     smtp = {
-  #       host = "mail.rwth-aachen.de";
-  #       port = 587;
-  #       tls = {
-  #         enable = true;
-  #         useStartTls = true;
-  #       };
-  #     };
-  #   };
-  # };
+  accounts.email.accounts = {
+    # "gmail".thunderbird.enable = true;
+    "rmail".thunderbird.enable = true;
+  };
 }
