@@ -41,16 +41,19 @@
 
   # Install Nix packages into the environment
   home.packages = with pkgs; [
-    # Flatpaks
+    # Social
+    discord
+    telegram-desktop
+
+    # Study
     anki
+    obsidian
+
     ausweisapp
     bitwarden
     filelight
-    discord
     #floorp
     krename
-    obsidian
-    telegram-desktop
     ticktick
     spotify
     vscodium
