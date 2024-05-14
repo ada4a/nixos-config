@@ -43,6 +43,7 @@
   home.packages = with pkgs; [
     # Social
     discord
+    signal-desktop
     telegram-desktop
 
     # Study
