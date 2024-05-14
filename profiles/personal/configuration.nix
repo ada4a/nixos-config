@@ -10,6 +10,7 @@
   imports = [
     ../../system/flatpak.nix
     ../../system/hardware-configuration.nix
+    ../../system/nix.nix
     ../../system/power.nix
     ../../system/steam.nix
     ../../system/syncthing.nix
@@ -20,19 +21,6 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
     efi.efiSysMountPoint = systemSettings.bootMountPath;
-  };
-
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
   };
 
   networking.hostName = systemSettings.hostname;
