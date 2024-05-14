@@ -47,17 +47,12 @@
     bitwarden
     filelight
     discord
-    flatpak
     #floorp
-    keepassxc
     krename
     obsidian
-    sqlitebrowser
     telegram-desktop
     ticktick
     spotify
-    tex-match
-    vlc
     vscodium
 
     # CLI
