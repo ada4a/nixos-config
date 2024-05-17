@@ -37,6 +37,7 @@
       inherit userSettings;
     })
     ../../user/email.nix
+    ../../user/plasma.nix
   ];
 
   # Install Nix packages into the environment
