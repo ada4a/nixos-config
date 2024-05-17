@@ -32,10 +32,7 @@
 
   imports = [
     ../../user/apps
-    (import ../../user/dev {
-      inherit pkgs;
-      inherit userSettings;
-    })
+    ../../user/dev
     ../../user/email.nix
     ../../user/plasma.nix
   ];
