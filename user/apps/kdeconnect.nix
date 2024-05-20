@@ -1,6 +1,8 @@
-{...}: {
+{pkgs, ...}: {
   services.kdeconnect = {
     enable = true;
+    # use the Plasma 6 package
+    package = pkgs.kdePackages.kdeconnect-kde;
     indicator = true;
   };
 
