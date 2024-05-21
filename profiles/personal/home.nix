@@ -16,13 +16,12 @@
     frequency = "weekly";
   };
 
-  nixpkgs.config.allowUnfree = true; # nix-community/home-manager/#463
-
   imports = [
     ../../user/apps
     ../../user/dev
     ../../user/email.nix
     ../../user/nix.nix
+    ../../user/nixpkgs
     ../../user/plasma.nix
   ];
 
