@@ -1,10 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    # LazyVim
-    gcc
-    #unzip
-    #python3
-
     # LSPs
     nixd
     lua-language-server
