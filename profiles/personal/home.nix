@@ -55,7 +55,6 @@
     krename
     ticktick
     spotify
-    vscodium
 
     # CLI
     nix-search-cli
