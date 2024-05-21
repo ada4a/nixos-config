@@ -7,9 +7,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    nix-vscode-extensions.inputs.nixpkgs.follows = "nixpkgs";
-
     plasma-manager.url = "github:pjones/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
@@ -18,7 +15,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    nix-vscode-extensions,
     plasma-manager,
     ...
   }: let
@@ -42,8 +38,6 @@
       layout = "eu";
       shell = pkgs.zsh;
     };
-
-    vscode-extensions = nix-vscode-extensions.extensions.${systemSettings.system};
   in {
     nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
       system = systemSettings.system;
@@ -70,7 +64,6 @@
       extraSpecialArgs = {
         inherit systemSettings;
         inherit userSettings;
-        inherit vscode-extensions;
       };
     };
   };
