@@ -14,7 +14,7 @@
     taplo # toml
 
     # Misc
-    # vimPlugins.lazygit-nvim
+    vscode-extensions.vadimcn.vscode-lldb.adapter
     lazygit
     bacon
   ];
