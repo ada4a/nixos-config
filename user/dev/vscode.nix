@@ -1,6 +1,6 @@
-{pkgs, ...}: {
+{vscode-extensions, ...}: {
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [vadimcn.vscode-lldb.adapter];
+    extensions = with vscode-extensions.vscode-marketplace; [vadimcn.vscode-lldb];
   };
 }
