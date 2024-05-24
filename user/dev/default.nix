@@ -1,4 +1,8 @@
-{userSettings, ...}: {
+{
+  pkgs,
+  userSettings,
+  ...
+}: {
   imports = [
     ./nix-direnv.nix
     ./rust.nix
@@ -9,5 +13,9 @@
     # reference: https://github.com/zellij-org/zellij/issues/2925
     #./zellij.nix
     ./zsh.nix
+  ];
+
+  home.packages = with pkgs; [
+    gdbgui
   ];
 }
