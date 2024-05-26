@@ -48,14 +48,6 @@
   # Configure keymap in X11
   services.xserver.xkb.layout = "eu,ru";
 
-  # Enable KDE Plasma
-  services = {
-    desktopManager.plasma6.enable = true;
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
-    displayManager.defaultSession = "plasma";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
