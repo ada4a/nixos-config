@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./bluetooth.nix
     ./flatpak.nix
     ./hardware-configuration.nix
     ./nix.nix
