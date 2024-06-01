@@ -8,12 +8,7 @@
   ...
 }: {
   imports = [
-    ../../system/flatpak.nix
-    ../../system/hardware-configuration.nix
-    ../../system/nix.nix
-    ../../system/power.nix
-    ../../system/steam.nix
-    ../../system/syncthing.nix
+    ../../system
   ];
 
   # Bootloader.
