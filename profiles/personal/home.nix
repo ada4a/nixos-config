@@ -40,6 +40,7 @@
     bitwarden
     filelight
     #floorp
+    kdePackages.korganizer
     krename
     ticktick
     spotify
