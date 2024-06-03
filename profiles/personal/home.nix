@@ -80,6 +80,7 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     BROWSER = "firefox";
+    FLAKE = "$HOME/.dotfiles";
   };
 
   home.keyboard = {
