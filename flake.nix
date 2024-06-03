@@ -39,8 +39,21 @@
       shell = pkgs.zsh;
     };
   in {
+    # My custom packages, available through 'nix build', 'nix shell', etc
+    packages.${systemSettings.system} = import ./pkgs {inherit pkgs;};
+
+    # My custom modules
+    nixosModules = import ./modules/nixos;
+    homeManagerModules = import ./modules/home;
+
+    # Formatter for my nix files, available through 'nix fmt'
+    formatter.${systemSettings.system} = pkgs.alejandra;
+
+    # devShell for bootstrapping a configuration
+    devShells.${systemSettings.system} = import ./shell.nix {inherit pkgs;};
+
     nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
-      system = systemSettings.system;
+      inherit (systemSettings) system;
 
       modules = [./profiles/personal/configuration.nix];
 
@@ -49,6 +62,7 @@
         inherit userSettings;
       };
     };
+
     homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
