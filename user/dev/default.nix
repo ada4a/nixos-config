@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./helix.nix
     ./nix-direnv.nix
     ./rust.nix
     ./neovim.nix
