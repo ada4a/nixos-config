@@ -5,6 +5,8 @@
 
   nix.settings = {
     experimental-features = "nix-command flakes";
+    # Opinionated: disable global registry^[1]
+    flake-registry = "";
   };
 
   nix.gc = {
