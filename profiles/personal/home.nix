@@ -17,12 +17,7 @@
   };
 
   imports = [
-    ../../user/apps
-    ../../user/dev
-    ../../user/email.nix
-    ../../user/nix.nix
-    ../../user/nixpkgs
-    ../../user/plasma.nix
+    ../../user
   ];
 
   # Install Nix packages into the environment
