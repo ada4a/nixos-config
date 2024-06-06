@@ -101,6 +101,7 @@
     zoxide
 
     home-manager
+    nh
     syncthing
     wl-clipboard
 
