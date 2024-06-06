@@ -1,4 +1,10 @@
 {pkgs, ...}: {
+  imports = [
+    ./helix.nix
+    ./neovim.nix
+    ./vscode.nix
+  ];
+
   home.packages = with pkgs; [
     # LSPs
     nixd
