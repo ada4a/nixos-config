@@ -7,7 +7,7 @@
     ./editors
     ./nix-direnv.nix
     ./rust.nix
-    (import ./git.nix {inherit userSettings;})
+    ./git.nix
     ./wezterm
     # disable for now because of a bug
     # reference: https://github.com/zellij-org/zellij/issues/2925
