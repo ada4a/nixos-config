@@ -5,6 +5,6 @@
     ./email.nix
     ./nix.nix
     ./nixpkgs
-    ./plasma.nix
+    ./plasma
   ];
 }
