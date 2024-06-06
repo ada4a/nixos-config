@@ -21,9 +21,5 @@
     rustfmt
     stylua
     taplo # toml
-
-    # Misc
-    lazygit
-    bacon
   ];
 }
