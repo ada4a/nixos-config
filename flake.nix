@@ -51,6 +51,9 @@
     nixosModules = import ./modules/nixos;
     homeManagerModules = import ./modules/home;
 
+    # My custom overlays
+    overlays = import ./overlays {};
+
     # Formatter for my nix files, available through 'nix fmt'
     formatter.${systemSettings.system} = pkgs.alejandra;
 
