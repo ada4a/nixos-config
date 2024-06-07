@@ -22,7 +22,7 @@
     plasma-manager,
     firefox-addons,
     ...
-  }: let
+  } @ inputs: let
     systemSettings = {
       system = "x86_64-linux";
       bootMountPath = "/boot";
@@ -52,7 +52,7 @@
     homeManagerModules = import ./modules/home;
 
     # My custom overlays
-    overlays = import ./overlays {};
+    overlays = import ./overlays {inherit inputs;};
 
     # Formatter for my nix files, available through 'nix fmt'
     formatter.${systemSettings.system} = pkgs.alejandra;
