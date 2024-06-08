@@ -11,6 +11,10 @@
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
 
+    # Secure Boot
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
+    lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+
     # Third party programs, packaged with nix
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
@@ -20,6 +24,7 @@
     nixpkgs,
     home-manager,
     plasma-manager,
+    lanzaboote,
     firefox-addons,
     ...
   } @ inputs: let
@@ -63,7 +68,10 @@
     nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
       inherit (systemSettings) system;
 
-      modules = [./profiles/personal/configuration.nix];
+      modules = [
+        ./profiles/personal/configuration.nix
+        lanzaboote.nixosModules.lanzaboote
+      ];
 
       specialArgs = {
         inherit systemSettings;
