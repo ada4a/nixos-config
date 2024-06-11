@@ -8,6 +8,7 @@
     };
     extraConfig = {
       init.defaultBranch = "main";
+      blame.ignoreRevsFile = ".git-blame-ignore-revs";
       core.editor = "nvim";
       merge.tool = "meld";
     };
