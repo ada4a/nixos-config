@@ -18,6 +18,10 @@
     # Third party programs, packaged with nix
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
+
+    # My custom stuff
+    ugura-custom.url = "./custom";
+    ugura-custom.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -26,6 +30,7 @@
     plasma-manager,
     lanzaboote,
     firefox-addons,
+    ugura-custom,
     ...
   } @ inputs: let
     systemSettings = {
@@ -49,16 +54,6 @@
       shell = pkgs.zsh;
     };
   in {
-    # My custom packages, available through 'nix build', 'nix shell', etc
-    packages.${systemSettings.system} = import ./pkgs {inherit pkgs;};
-
-    # My custom modules
-    nixosModules = import ./modules/nixos;
-    homeManagerModules = import ./modules/home;
-
-    # My custom overlays
-    overlays = import ./overlays {inherit inputs;};
-
     # Formatter for my nix files, available through 'nix fmt'
     formatter.${systemSettings.system} = pkgs.alejandra;
 
@@ -74,6 +69,7 @@
       ];
 
       specialArgs = {
+        inherit ugura-custom;
         inherit systemSettings;
         inherit userSettings;
       };
@@ -92,6 +88,7 @@
       # Optionally use extraSpecialArgs
       # to pass through arguments to home.nix
       extraSpecialArgs = {
+        inherit ugura-custom;
         inherit systemSettings;
         inherit userSettings;
       };
