@@ -1,8 +1,10 @@
 {
+  inputs,
+  systemSettings,
   userSettings,
   ...
 }: {
-  progams.firefox.profiles."${userSettings.username}" = {
+  programs.firefox.profiles."${userSettings.username}" = {
     isDefault = true;
     search = {
       default = "DuckDuckGo";
@@ -12,5 +14,12 @@
     settings = {
       "widget.use-xdg-desktop-portal.file-picker" = "1";
     };
+    extensions = with inputs.firefox-addons.packages.${systemSettings.system}; [
+      bitwarden
+      darkreader
+      simple-tab-groups
+      ublock-origin
+      vimium
+    ];
   };
 }
