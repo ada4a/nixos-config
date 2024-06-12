@@ -2,4 +2,4 @@
   ugura-custom,
   systemSettings,
   ...
-}: {home.packages = with ugura-custom.packages.${systemSettings.system}; [ddcci-plasmoid];}
+}: {home.packages = with ugura-custom.legacyPackages.${systemSettings.system}; [ddcci-plasmoid];}

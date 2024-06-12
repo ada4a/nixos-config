@@ -16,7 +16,7 @@
         pkgs = nixpkgs.legacyPackages.${system};
       in {
         # My custom packages, available through 'nix build', 'nix shell', etc
-        packages = import ./pkgs {inherit pkgs;};
+        legacyPackages = import ./pkgs/legacy {inherit pkgs;};
 
         # My custom modules
         nixosModules = import ./modules/nixos;
