@@ -333,11 +333,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-5xYTWiD8zj3sbqSwkLTIWgaIaP8Bh3cBLenh7YqG9r0=",
-        "path": "/nix/store/6n9vspc5mrrygq6dx931q59n8zj37c77-source/custom",
+        "path": "/nix/store/1vgm18d6c0pm46dvdc9hqaxvi7grxvk5-source/custom",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/6n9vspc5mrrygq6dx931q59n8zj37c77-source/custom",
+        "path": "/nix/store/1vgm18d6c0pm46dvdc9hqaxvi7grxvk5-source/custom",
         "type": "path"
       }
     }
