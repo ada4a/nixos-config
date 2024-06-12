@@ -18,10 +18,11 @@ in {
         };
       };
       folders = {
-        "Obsidian - main" = {
-          path = "~/Obsidian/main";
-          devices = ["samsung" "ipad"];
-        };
+        # disabled while I'm using Obsidian Sync
+        # "Obsidian - main" = {
+        #   path = "~/Obsidian/main";
+        #   devices = ["samsung" "ipad"];
+        # };
         "Library" = {
           path = "~/Documents/Library";
           devices = ["samsung" "ipad"];
