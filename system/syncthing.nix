@@ -1,9 +1,11 @@
-{userSettings, ...}: {
+{userSettings, ...}: let
+  inherit (userSettings) username;
+in {
   services.syncthing = {
     enable = true;
-    user = userSettings.username;
-    dataDir = "/home/" + userSettings.username + "/Documents";
-    configDir = "/home/" + userSettings.username + "/.config/syncthing";
+    user = username;
+    dataDir = "/home/${username}/Documents";
+    configDir = "/home/${username}/.config/syncthing";
     overrideDevices = true;
     overrideFolders = true;
     settings = {
