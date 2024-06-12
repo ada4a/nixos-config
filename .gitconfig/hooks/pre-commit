@@ -1,0 +1,2 @@
+#! /usr/bin/env bash
+nh os build && nh home build
