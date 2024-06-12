@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # only add this so that all the other inputs follow it
+    flake-utils.url = "github:numtide/flake-utils";
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -14,14 +16,17 @@
     # Secure Boot
     lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+    lanzaboote.inputs.flake-utils.follows = "flake-utils";
 
     # Third party programs, packaged with nix
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
+    firefox-addons.inputs.flake-utils.follows = "flake-utils";
 
     # My custom stuff
     ugura-custom.url = "./custom";
     ugura-custom.inputs.nixpkgs.follows = "nixpkgs";
+    ugura-custom.inputs.flake-utils.follows = "flake-utils";
   };
 
   outputs = {
