@@ -2,7 +2,7 @@
   imports = [
     ./bluetooth.nix
     ./certificates
-    ./flatpak.nix
+    #./flatpak.nix
     ./hardware-configuration.nix
     ./nix.nix
     ./plasma.nix
