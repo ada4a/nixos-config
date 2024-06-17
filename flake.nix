@@ -24,7 +24,7 @@
     firefox-addons.inputs.flake-utils.follows = "flake-utils";
 
     # My custom stuff
-    ugura-custom.url = "./custom";
+    ugura-custom.url = "github:ugur-a/flake-custom";
     ugura-custom.inputs.nixpkgs.follows = "nixpkgs";
     ugura-custom.inputs.flake-utils.follows = "flake-utils";
   };

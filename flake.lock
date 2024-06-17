@@ -331,14 +331,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-5xYTWiD8zj3sbqSwkLTIWgaIaP8Bh3cBLenh7YqG9r0=",
-        "path": "/nix/store/1vgm18d6c0pm46dvdc9hqaxvi7grxvk5-source/custom",
-        "type": "path"
+        "lastModified": 1718620619,
+        "narHash": "sha256-9TEOKhltapnI8xHvPHqLXWLKC0ZcmxvHKY7UyvFGIik=",
+        "owner": "ugur-a",
+        "repo": "flake-custom",
+        "rev": "b6eb8d68a89cacbc3d7d4eec702930de22baaf35",
+        "type": "github"
       },
       "original": {
-        "path": "/nix/store/1vgm18d6c0pm46dvdc9hqaxvi7grxvk5-source/custom",
-        "type": "path"
+        "owner": "ugur-a",
+        "repo": "flake-custom",
+        "type": "github"
       }
     }
   },
