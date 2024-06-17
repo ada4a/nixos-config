@@ -1,5 +1,5 @@
 {
-  inputs,
+  firefox-addons,
   systemSettings,
   userSettings,
   ...
@@ -14,7 +14,7 @@
     settings = {
       "widget.use-xdg-desktop-portal.file-picker" = "1";
     };
-    extensions = with inputs.firefox-addons.packages.${systemSettings.system}; [
+    extensions = with firefox-addons.packages.${systemSettings.system}; [
       bitwarden
       darkreader
       simple-tab-groups

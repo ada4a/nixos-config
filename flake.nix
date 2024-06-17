@@ -34,7 +34,6 @@
     home-manager,
     plasma-manager,
     lanzaboote,
-    firefox-addons,
     ugura-custom,
     ...
   } @ inputs: let
