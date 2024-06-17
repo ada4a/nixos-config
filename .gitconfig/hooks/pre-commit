@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-nh os build 2>/dev/null && nh home build 2>/dev/null
+nix flake check
