@@ -81,6 +81,8 @@
     layout = "eu,ru";
   };
 
+  home.preferXdgDirectories = true;
+
   xdg.mimeApps.defaultApplications = {
     "text/*" = ["nvim.desktop"];
     "application/pdf" = ["okular.desktop"];
