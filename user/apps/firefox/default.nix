@@ -9,7 +9,7 @@
     search = {
       force = true;
       default = "DuckDuckGo";
-      provateDefault = "DuckDuckGo";
+      privateDefault = "DuckDuckGo";
     };
     settings = {
       "widget.use-xdg-desktop-portal.file-picker" = "1";
