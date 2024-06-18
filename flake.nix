@@ -32,6 +32,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    firefox-addons,
     plasma-manager,
     lanzaboote,
     ugura-custom,
@@ -92,6 +93,7 @@
       # Optionally use extraSpecialArgs
       # to pass through arguments to home.nix
       extraSpecialArgs = {
+        inherit firefox-addons;
         inherit ugura-custom;
         inherit systemSettings;
         inherit userSettings;

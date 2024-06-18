@@ -4,6 +4,10 @@
   userSettings,
   ...
 }: {
+  imports = [
+    ./engines.nix
+  ];
+
   programs.firefox.profiles."${userSettings.username}" = {
     isDefault = true;
     search = {
