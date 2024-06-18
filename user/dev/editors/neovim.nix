@@ -1,1 +1,3 @@
-{...}: {}
+{...}: {
+  programs.neovim.defaultEditor = true;
+}
