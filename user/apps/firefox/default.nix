@@ -8,6 +8,7 @@
     ./engines.nix
   ];
 
+  programs.firefox.enable = true;
   programs.firefox.profiles."${userSettings.username}" = {
     isDefault = true;
     search = {
