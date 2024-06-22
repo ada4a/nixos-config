@@ -26,13 +26,13 @@
       definedAliases = ["@nxw"];
     };
 
-    "Nix Options" = {
+    "NixOS options" = {
       urls = [{template = "https://search.nixos.org/options?query={searchTerms}";}];
       icon = "/favicon.png";
       definedAliases = ["@nxo"];
     };
 
-    "Nix Packages" = {
+    "NixOS packages" = {
       urls = [{template = "https://search.nixos.org/packages?query={searchTerms}";}];
       icon = "/favicon.png";
       definedAliases = ["@nxp"];
