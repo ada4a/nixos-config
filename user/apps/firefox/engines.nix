@@ -11,17 +11,7 @@
     # Stolen from
     # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L28-45
     "Github" = {
-      urls = [
-        {
-          template = "https://github.com/search";
-          params = [
-            {
-              name = "q";
-              value = "{searchTerms}";
-            }
-          ];
-        }
-      ];
+      urls = [{template = "https://github.com/search?q={searchTerms}&ref=opensearch";}];
       icon = "${pkgs.fetchurl {
         url = "https://github.githubassets.com/favicons/favicon.svg";
         hash = "sha256-apV3zU9/prdb3hAlr4W5ROndE4g3O1XMum6fgKwurmA=";
@@ -37,41 +27,13 @@
     };
 
     "Nix Options" = {
-      urls = [
-        {
-          template = "https://search.nixos.org/options";
-          params = [
-            {
-              name = "type";
-              value = "options";
-            }
-            {
-              name = "query";
-              value = "{searchTerms}";
-            }
-          ];
-        }
-      ];
+      urls = [{template = "https://search.nixos.org/options?query={searchTerms}";}];
       icon = "/favicon.png";
       definedAliases = ["@nxo"];
     };
 
     "Nix Packages" = {
-      urls = [
-        {
-          template = "https://search.nixos.org/packages";
-          params = [
-            {
-              name = "type";
-              value = "packages";
-            }
-            {
-              name = "query";
-              value = "{searchTerms}";
-            }
-          ];
-        }
-      ];
+      urls = [{template = "https://search.nixos.org/packages?query={searchTerms}";}];
       icon = "/favicon.png";
       definedAliases = ["@nxp"];
     };
@@ -79,17 +41,7 @@
     # Stolen from
     # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L83-96
     "Nixpkgs Issues" = {
-      urls = [
-        {
-          template = "https://github.com/NixOS/nixpkgs/issues";
-          params = [
-            {
-              name = "q";
-              value = "{searchTerms}";
-            }
-          ];
-        }
-      ];
+      urls = [{template = "https://github.com/NixOS/nixpkgs/issues?q=is:issue+is:open+{searchTerms}";}];
       icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
       definedAliases = ["@nxi"];
     };
@@ -106,17 +58,7 @@
     # Stolen from
     # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L119-138
     "Youtube" = {
-      urls = [
-        {
-          template = "https://www.youtube.com/results";
-          params = [
-            {
-              name = "search_query";
-              value = "{searchTerms}";
-            }
-          ];
-        }
-      ];
+      urls = [{template = "https://www.youtube.com/results?search_query={searchTerms}";}];
       icon = "${pkgs.fetchurl {
         url = "www.youtube.com/s/desktop/8498231a/img/favicon_144x144.png";
         sha256 = "sha256-lQ5gbLyoWCH7cgoYcy+WlFDjHGbxwB8Xz0G7AZnr9vI=";
