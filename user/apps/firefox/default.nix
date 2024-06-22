@@ -22,9 +22,13 @@
     extensions = with firefox-addons.packages.${systemSettings.system}; [
       bitwarden
       darkreader
+      # Add these when they're added to the repo
+      # https://gitlab.com/rycee/nur-expressions/-/issues/231
+      # dictionary-german
       simple-tab-groups
       ublock-origin
       vimium
+      # whowrotethat
     ];
   };
 }
