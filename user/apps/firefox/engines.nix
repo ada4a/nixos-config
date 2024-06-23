@@ -6,6 +6,7 @@ in {
     "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
     "Wikipedia (en)".metaData.alias = "@w";
 
+    # https://docs.rs/-/static/opensearch.xml
     "Docs.rs" = {
       urls = [{template = "https://docs.rs/releases/search?query={searchTerms}";}];
       iconUpdateURL = "https://docs.rs/-/static/favicon.ico";
@@ -20,6 +21,7 @@ in {
       definedAliases = ["@rstd"];
     };
 
+    # https://github.com/opensearch.xml
     "Github" = {
       urls = [{template = "https://github.com/search?q={searchTerms}&ref=opensearch";}];
       iconUpdateURL = "https://github.githubassets.com/favicons/favicon.svg";
@@ -27,6 +29,7 @@ in {
       definedAliases = ["@gh"];
     };
 
+    # https://wiki.nixos.org/w/opensearch_desc.php
     "NixOS Wiki" = {
       urls = [{template = "https://wiki.nixos.org/index.php?search={searchTerms}";}];
       iconUpdateURL = "https://wiki.nixos.org/favicon.png";
@@ -34,6 +37,7 @@ in {
       definedAliases = ["@nxw"];
     };
 
+    # https://search.nixos.org/desc-search-options.xml
     "NixOS options" = {
       urls = [{template = "https://search.nixos.org/options?query={searchTerms}";}];
       iconUpdateURL = "https://search.nixos.org/favicon.png";
@@ -41,6 +45,7 @@ in {
       definedAliases = ["@nxo"];
     };
 
+    # https://search.nixos.org/desc-search-packages.xml
     "NixOS packages" = {
       urls = [{template = "https://search.nixos.org/packages?query={searchTerms}";}];
       iconUpdateURL = "https://search.nixos.org/favicon.png";
@@ -55,6 +60,7 @@ in {
       definedAliases = ["@nxi"];
     };
 
+    # https://home-manager-options.extranix.com/opensearch.xml
     "Home Manager - Options Search" = {
       urls = [{template = "https://home-manager-options.extranix.com/?query={searchTerms}";}];
       iconUpdateURL = "https://home-manager-options.extranix.com/images/favicon.png";
@@ -62,6 +68,7 @@ in {
       definedAliases = ["@hm"];
     };
 
+    # https://dict.leo.org/pages/helpers/shared/searches/opensearch_ende_en.xml
     "Leo Eng-Ger" = {
       urls = [
         {template = "https://dict.leo.org/german-english/{searchTerms}";}
@@ -72,6 +79,7 @@ in {
       definedAliases = ["@leo"];
     };
 
+    # https://dict.leo.org/pages/helpers/shared/searches/opensearch_rude_ru.xml
     "Leo Rus-Deu" = {
       urls = [
         {template = "https://dict.leo.org/немецкий-русский/{searchTerms}";}
