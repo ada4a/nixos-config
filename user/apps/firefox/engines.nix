@@ -14,6 +14,12 @@
       definedAliases = ["@rs"];
     };
 
+    "Rust Standard Library" = {
+      urls = [{template = "https://doc.rust-lang.org/std/?search={searchTerms}";}];
+      icon = "https://docs.rs/-/static/favicon.ico";
+      definedAliases = ["@rstd"];
+    };
+
     # Stolen from
     # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L28-45
     "Github" = {
