@@ -21,5 +21,6 @@
     rustfmt
     stylua
     taplo # toml
+    # xmlformat
   ];
 }
