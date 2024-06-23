@@ -62,6 +62,26 @@ in {
       definedAliases = ["@hm"];
     };
 
+    "Leo Eng-Ger" = {
+      urls = [
+        {template = "https://dict.leo.org/german-english/{searchTerms}";}
+        {template = "https://dict.leo.org/dictQuery/m-query/conf/ende/query.conf/strlist.json?q={searchTerms}&sort=PLa&shortQuery&noDescription&noQueryURLs";}
+      ];
+      iconUpdateURL = "https://dict.leo.org/img/favicons/ende.ico";
+      inherit updateInterval;
+      definedAliases = ["@leo"];
+    };
+
+    "Leo Rus-Deu" = {
+      urls = [
+        {template = "https://dict.leo.org/немецкий-русский/{searchTerms}";}
+        {template = "https://dict.leo.org/dictQuery/m-query/conf/rude/query.conf/strlist.json?q={searchTerms}&sort=PLa&shortQuery&noDescription&noQueryURLs";}
+      ];
+      iconUpdateURL = "https://dict.leo.org/img/favicons/rude.ico";
+      inherit updateInterval;
+      definedAliases = ["@leor"];
+    };
+
     "WayBack Machine" = {
       urls = [{template = "https://web.archive.org/web/*/{searchTerms}";}];
       iconUpdateURL = "https://web.archive.org/_static/images/archive.ico";
