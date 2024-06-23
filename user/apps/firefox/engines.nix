@@ -85,7 +85,7 @@ in {
     # https://dict.leo.org/pages/helpers/shared/searches/opensearch_rude_ru.xml
     "Leo Rus-Deu" = {
       urls = [
-        {template = "https://dict.leo.org/немецкий-русский/{searchTerms}";}
+        {template = "https://dict.leo.org/russisch-deutsch/{searchTerms}";}
         {template = "https://dict.leo.org/dictQuery/m-query/conf/rude/query.conf/strlist.json?q={searchTerms}&sort=PLa&shortQuery&noDescription&noQueryURLs";}
       ];
       iconUpdateURL = "https://dict.leo.org/img/favicons/rude.ico";
