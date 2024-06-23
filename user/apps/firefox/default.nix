@@ -21,8 +21,13 @@
     };
     extensions = with firefox-addons.packages.${systemSettings.system}; [
       bitwarden
+      clearurls
       darkreader
       dictionary-german
+      duckduckgo-privacy-essentials
+      indie-wiki-buddy
+      plasma-integration
+      return-youtube-dislikes
       simple-tab-groups
       ublock-origin
       vimium
