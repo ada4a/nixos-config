@@ -20,8 +20,6 @@ in {
       definedAliases = ["@rstd"];
     };
 
-    # Stolen from
-    # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L28-45
     "Github" = {
       urls = [{template = "https://github.com/search?q={searchTerms}&ref=opensearch";}];
       iconUpdateURL = "https://github.githubassets.com/favicons/favicon.svg";
@@ -50,8 +48,6 @@ in {
       definedAliases = ["@nxp"];
     };
 
-    # Stolen from
-    # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L83-96
     "Nixpkgs Issues" = {
       urls = [{template = "https://github.com/NixOS/nixpkgs/issues?q=is:issue+is:open+{searchTerms}";}];
       iconUpdateURL = "https://search.nixos.org/favicon.png";
@@ -59,8 +55,6 @@ in {
       definedAliases = ["@nxi"];
     };
 
-    # Stolen from:
-    # https://github.com/hpfr/system/blob/a108a5ebf3ffcee75565176243936de6fd736142/profiles/user/firefox/default.nix#L148-L156
     "WayBack Machine" = {
       urls = [{template = "https://web.archive.org/web/*/{searchTerms}";}];
       iconUpdateURL = "https://web.archive.org/_static/images/archive.ico";
@@ -68,8 +62,6 @@ in {
       definedAliases = ["@wba"];
     };
 
-    # Stolen from
-    # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L119-138
     "Youtube" = {
       urls = [{template = "https://www.youtube.com/results?search_query={searchTerms}";}];
       iconUpdateURL = "www.youtube.com/s/desktop/8498231a/img/favicon_144x144.png";
