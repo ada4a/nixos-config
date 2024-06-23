@@ -8,6 +8,12 @@
     "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
     "Wikipedia (en)".metaData.alias = "@w";
 
+    "Docs.rs" = {
+      urls = [{template = "https://docs.rs/releases/search?query={searchTerms}";}];
+      icon = "https://docs.rs/-/static/favicon.ico";
+      definedAliases = ["@rs"];
+    };
+
     # Stolen from
     # https://gitlab.com/kira-bruneau/nixos-config/-/blob/5d6ae0f48c4a4df901e2b4fc0f00ffb52d6f01c2/home/programs/firefox/default.nix#L28-45
     "Github" = {
