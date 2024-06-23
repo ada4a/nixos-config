@@ -32,7 +32,7 @@ in {
     # https://wiki.nixos.org/w/opensearch_desc.php
     "NixOS Wiki" = {
       urls = [
-        {template = "https://wiki.nixos.org/index.php?search={searchTerms}";}
+        {template = "https://wiki.nixos.org/w/index.php?search={searchTerms}";}
         {template = "https://wiki.nixos.org/w/api.php?action=opensearch&amp;search={searchTerms}&amp;namespace=0";}
       ];
       iconUpdateURL = "https://wiki.nixos.org/favicon.png";
