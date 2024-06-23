@@ -55,6 +55,13 @@ in {
       definedAliases = ["@nxi"];
     };
 
+    "Home Manager - Options Search" = {
+      urls = [{template = "https://home-manager-options.extranix.com/?query={searchTerms}";}];
+      iconUpdateURL = "https://home-manager-options.extranix.com/images/favicon.png";
+      inherit updateInterval;
+      definedAliases = ["@hm"];
+    };
+
     "WayBack Machine" = {
       urls = [{template = "https://web.archive.org/web/*/{searchTerms}";}];
       iconUpdateURL = "https://web.archive.org/_static/images/archive.ico";
