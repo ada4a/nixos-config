@@ -106,5 +106,13 @@ in {
       inherit updateInterval;
       definedAliases = ["@y"];
     };
+
+    # https://www.google.com/maps/preview/opensearch.xml?hl=en
+    "Google Maps" = {
+      urls = [{template = "https://www.google.com/maps/search/{searchTerms}?hl=en&source=opensearch";}];
+      iconUpdateURL = "https://www.google.com/images/branding/product/ico/maps15_bnuw3a_16dp.ico";
+      inherit updateInterval;
+      definedAliases = ["@m"];
+    };
   };
 }
