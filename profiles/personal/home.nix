@@ -38,6 +38,7 @@
     krename
     ticktick
     spotify
+    steam
 
     # CLI
 
