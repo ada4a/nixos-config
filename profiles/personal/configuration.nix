@@ -89,6 +89,7 @@
     eza
     du-dust
     fastmod
+    fd
     fzf
     git
     htop
