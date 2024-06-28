@@ -14,7 +14,7 @@
     initExtra = ''
       flakify() {
           if [ ! -e flake.nix ]; then
-              nix flake new -t github:nix-community/nix-direnv .
+              nix flake new -t github:ugur-a/flake-custom#nix-direnv .
           elif [ ! -e .envrc ]; then
               echo "use flake" > .envrc
               direnv allow
