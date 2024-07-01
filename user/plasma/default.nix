@@ -3,5 +3,11 @@
   programs.plasma = {
     enable = true;
     overrideConfig = true;
+    panels = [
+      {
+        location = "floating"; # the default
+        height = 42;
+      }
+    ];
   };
 }
