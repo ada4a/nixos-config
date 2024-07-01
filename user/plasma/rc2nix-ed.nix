@@ -1,6 +1,5 @@
 {
   programs.plasma = {
-    enable = true;
     shortcuts = {
       "ActivityManager"."switch-to-activity-2acf1aa8-fd55-45d8-a115-565ff9b525c4" = [];
       "ActivityManager"."switch-to-activity-72dc4e8c-8ee3-476a-a644-6559f67273d6" = [];
