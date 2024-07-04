@@ -77,6 +77,7 @@
         inherit ugura-custom;
         inherit systemSettings;
         inherit userSettings;
+        flakePath = inputs.self.outPath;
       };
     };
 
