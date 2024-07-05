@@ -32,12 +32,6 @@
           replace = userSettings.rmail;
         }
       ];
-      webarchive.matches = [
-        {
-          trigger = ";archive";
-          replace = "https://web.archive.org/web/";
-        }
-      ];
     };
   };
 }
