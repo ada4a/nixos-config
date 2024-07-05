@@ -22,30 +22,6 @@
       };
     };
     matches = {
-      base.matches = [
-        {
-          trigger = ":espanso";
-          replace = "Hi there!";
-        }
-        {
-          trigger = ":date";
-          replace = "{{mydate}}";
-          vars = {
-            name = "mydate";
-            type = "date";
-            params.format = "%d.%m.%Y";
-          };
-        }
-        {
-          trigger = ":shell";
-          replace = "{{output}}";
-          vars = {
-            name = "output";
-            type = "shell";
-            params.cmd = "echo 'Hello from your shell'";
-          };
-        }
-      ];
       emails.matches = [
         {
           trigger = ";gmail";
