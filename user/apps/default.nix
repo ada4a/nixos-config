@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./espanso.nix
+    ./espanso
     ./firefox
     ./hyfetch.nix
     ./kdeconnect.nix
