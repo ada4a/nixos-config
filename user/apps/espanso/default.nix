@@ -16,10 +16,6 @@
         filter-class = "thunderbird";
         backend = "Inject";
       };
-      obsidian = {
-        filter-class = "obsidian";
-        extra_includes = ["../match/_latex.yml"];
-      };
     };
     matches = {
       emails.matches = [
