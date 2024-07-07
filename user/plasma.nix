@@ -30,6 +30,7 @@
                 # FIXME this really should be preferred://editor or something
                 "applications:nvim.desktop"
               ];
+              behavior.wheel.switchBetweenTasks = false;
             };
           }
           "org.kde.plasma.marginsseparator"
