@@ -9,5 +9,8 @@
         height = 42;
       }
     ];
+    workspace = {
+      clickItemTo = "select";
+    };
   };
 }

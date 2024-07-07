@@ -273,7 +273,6 @@
       "kdeglobals"."General"."AllowKDEAppsToRememberWindowPositions" = true;
       "kdeglobals"."General"."TerminalApplication" = "wezterm start --cwd .";
       "kdeglobals"."General"."TerminalService" = "org.wezfurlong.wezterm.desktop";
-      "kdeglobals"."KDE"."SingleClick" = true;
       "kdeglobals"."KFileDialog Settings"."Allow Expansion" = false;
       "kdeglobals"."KFileDialog Settings"."Automatically select filename extension" = true;
       "kdeglobals"."KFileDialog Settings"."Breadcrumb Navigation" = true;
