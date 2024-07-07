@@ -20,8 +20,7 @@
           "org.kde.plasma.kickoff"
           "org.kde.plasma.showActivityManager"
           {
-            name = "org.kde.plasma.icontasks";
-            config.General = {
+            iconTasks = {
               launchers = [
                 "preferred://browser"
                 "applications:obsidian.desktop"
