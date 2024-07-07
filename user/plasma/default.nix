@@ -5,7 +5,8 @@
     overrideConfig = true;
     panels = [
       {
-        location = "floating"; # the default
+        location = "bottom";
+        floating = true;
         height = 42;
       }
     ];
