@@ -10,6 +10,8 @@
         "NaturalScroll" = true;
         "PointerAcceleration" = 0.200;
       };
+      # disable the hot corner (aka. Screen Edge)
+      "kwinrc"."Effect-overview"."BorderActivate" = 9;
     };
     panels = [
       {
