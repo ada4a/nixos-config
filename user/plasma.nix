@@ -34,7 +34,11 @@
             };
           }
           "org.kde.plasma.marginsseparator"
-          "org.kde.plasma.systemtray"
+          {
+            systemTray = {
+              items.configs.battery.showPercentage = true;
+            };
+          }
           "org.kde.plasma.digitalclock"
           "org.kde.plasma.showdesktop"
         ];
