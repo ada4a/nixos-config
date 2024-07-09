@@ -12,6 +12,8 @@
       };
       # disable the hot corner (aka. Screen Edge)
       "kwinrc"."Effect-overview"."BorderActivate" = 9;
+      "kxkbrc"."Layout"."ResetOldOptions" = true;
+      "kxkbrc"."Layout"."Options" = "grp:win_space_toggle,caps:escape_shifted_capslock";
     };
     panels = [
       {
