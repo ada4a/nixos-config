@@ -15,6 +15,11 @@
       "kxkbrc"."Layout"."ResetOldOptions" = true;
       "kxkbrc"."Layout"."Options" = "grp:win_space_toggle,caps:escape_shifted_capslock";
     };
+
+    shortcuts = {
+      "kwin"."Window Maximize" = ["Meta+Up"];
+    };
+
     panels = [
       {
         location = "bottom";
