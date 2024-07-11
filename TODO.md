@@ -1,0 +1,2 @@
+- [ ] stop using OhMyZsh
+- [ ] put {user,system}Settings into an option module
