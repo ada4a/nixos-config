@@ -1,30 +1,36 @@
-{config, ...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   programs.zellij = {
     enable = true;
     enableZshIntegration = true;
   };
 
-  # NOTE Konsole splits the config in this weird way
+  home.file = lib.mkIf config.programs.plasma.enable {
+    # NOTE Konsole splits the config in this weird way
 
-  # add the profile
-  home.file."konsolerc" = {
-    enable = true;
-    text = ''
-      [Desktop Entry]
-      DefaultProfile=Zellij.profile
-    '';
-    target = "${config.xdg.configHome}/konsolerc";
-  };
+    # add the profile
+    "konsolerc" = {
+      enable = true;
+      text = ''
+        [Desktop Entry]
+        DefaultProfile=Zellij.profile
+      '';
+      target = "${config.xdg.configHome}/konsolerc";
+    };
 
-  # define the profile
-  home.file."Zellij.profile" = {
-    enable = true;
-    text = ''
-      [General]
-      Command=zellij -l welcome
-      Name=Zellij
-      Parent=FALLBACK/
-    '';
-    target = "${config.xdg.dataHome}/konsole/Zellij.profile";
+    # define the profile
+    "Zellij.profile" = {
+      enable = true;
+      text = ''
+        [General]
+        Command=zellij -l welcome
+        Name=Zellij
+        Parent=FALLBACK/
+      '';
+      target = "${config.xdg.dataHome}/konsole/Zellij.profile";
+    };
   };
 }
