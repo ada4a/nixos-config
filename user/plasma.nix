@@ -1,4 +1,8 @@
-{userSettings, ...}: let
+{
+  config,
+  userSettings,
+  ...
+}: let
   # Unfortunately, there isn't a preferred://terminal, so emulate that
   # by mapping userSettings.terminal to the corresponding .desktop file
   terminal = let
@@ -8,6 +12,14 @@
     };
   in
     builtins.getAttr userSettings.terminal match_terminal;
+
+  # similarly with preferred://terminal, but map $EDITOR instead
+  editor = let
+    match_editor = {
+      "nvim" = "applications:nvim.desktop";
+    };
+  in
+    builtins.getAttr config.home.sessionVariables.EDITOR match_editor;
 in {
   programs.plasma = {
     enable = true;
@@ -46,8 +58,7 @@ in {
                 "applications:obsidian.desktop"
                 terminal # see definition above (in "let in"-block)
                 "preferred://filemanager"
-                # FIXME this really should be preferred://editor or something
-                "applications:nvim.desktop"
+                editor # ditto
               ];
               behavior.wheel.switchBetweenTasks = false;
             };
