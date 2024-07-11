@@ -1,4 +1,14 @@
-{...}: {
+{userSettings, ...}: let
+  # Unfortunately, there isn't a preferred://terminal, so emulate that
+  # by mapping userSettings.terminal to the corresponding .desktop file
+  terminal = let
+    match_terminal = {
+      "konsole" = "applications:org.kde.konsole.desktop";
+      "wezterm" = "applications:org.wezfurlong.wezterm.desktop";
+    };
+  in
+    builtins.getAttr userSettings.terminal match_terminal;
+in {
   programs.plasma = {
     enable = true;
     overrideConfig = true;
@@ -34,8 +44,7 @@
               launchers = [
                 "preferred://browser"
                 "applications:obsidian.desktop"
-                # FIXME this really should be preferred://terminal or something
-                "applications:org.wezfurlong.wezterm.desktop"
+                terminal # see definition above (in "let in"-block)
                 "preferred://filemanager"
                 # FIXME this really should be preferred://editor or something
                 "applications:nvim.desktop"

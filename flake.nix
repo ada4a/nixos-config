@@ -57,6 +57,7 @@
       username = "ugura";
       layout = "eu";
       shell = pkgs.zsh;
+      terminal = "konsole";
     };
   in {
     # Formatter for my nix files, available through 'nix fmt'
