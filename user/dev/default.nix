@@ -5,9 +5,7 @@
     ./rust.nix
     ./git.nix
     ./wezterm
-    # disable for now because of a bug
-    # reference: https://github.com/zellij-org/zellij/issues/2925
-    # ./zellij
+    ./zellij
     ./zsh.nix
   ];
 

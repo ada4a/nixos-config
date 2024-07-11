@@ -4,7 +4,9 @@
   ...
 }: {
   programs.zellij = {
-    enable = true;
+    # disable for now because of a bug
+    # reference: https://github.com/zellij-org/zellij/issues/2925
+    enable = false;
     enableZshIntegration = true;
   };
 
