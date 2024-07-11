@@ -13,7 +13,7 @@
       ls = "eza";
       top = "htop";
       n = "nvim";
-      up = "sudo zypper dup && flatpak update && cargo install-update";
+      up = "nix flake update --commit-lock-file $FLAKE && nh home switch && nh os switch";
       v = "nvim";
       vi = "nvim";
     };
