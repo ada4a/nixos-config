@@ -21,16 +21,11 @@
       L = "| less";
       G = "| rg";
     };
-    oh-my-zsh = {
+    antidote = {
       enable = true;
-      theme = "robbyrussell";
-      plugins = [
-        "git"
-        "rust"
-        "sudo"
-        "systemd"
-        "zoxide"
-      ];
+      plugins =
+        # OhMyZsh
+        map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") ["git" "rust" "sudo" "sudo" "systemd" "zoxide"];
     };
   };
 }
