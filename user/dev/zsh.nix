@@ -14,8 +14,6 @@
       top = "htop";
       n = "nvim";
       up = "nix flake update --commit-lock-file $FLAKE && nh home switch && nh os switch";
-      v = "nvim";
-      vi = "nvim";
     };
     oh-my-zsh = {
       enable = true;
