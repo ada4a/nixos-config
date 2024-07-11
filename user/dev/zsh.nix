@@ -1,13 +1,16 @@
 {config, ...}: {
   programs.zsh = {
     enable = true;
+
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+
     history = {
       path = "${config.xdg.stateHome}/zsh/history";
       ignoreAllDups = true;
     };
     historySubstringSearch.enable = true;
+
     shellAliases = {
       cat = "bat";
       cd = "z";
@@ -21,6 +24,7 @@
       L = "| less";
       G = "| rg";
     };
+
     antidote = {
       enable = true;
       plugins =
@@ -28,6 +32,7 @@
         map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") ["git" "rust" "sudo" "sudo" "systemd" "zoxide"]
         ++ ["Aloxaf/fzf-tab"];
     };
+
     initExtra = ''
       # Completion styling
       # Stolen from: https://github.com/dreamsofautonomy/zensh/blob/0ef5b9384f22923c73ae521d5d74bebb7b5791f5/.zshrc#L70-L75
