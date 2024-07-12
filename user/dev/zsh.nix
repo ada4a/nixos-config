@@ -29,7 +29,7 @@
       enable = true;
       plugins =
         # OhMyZsh
-        map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") ["git" "rust" "sudo" "sudo" "systemd" "zoxide"]
+        map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") ["git" "rust" "sudo" "sudo" "systemd"]
         ++ ["Aloxaf/fzf-tab"];
     };
 

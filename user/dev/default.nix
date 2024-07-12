@@ -6,6 +6,7 @@
     ./git.nix
     ./wezterm
     ./zellij
+    ./zoxide.nix
     ./zsh.nix
   ];
 
