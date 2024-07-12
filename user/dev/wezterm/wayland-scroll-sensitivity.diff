@@ -1,0 +1,13 @@
+diff --git a/window/src/os/wayland/window.rs b/window/src/os/wayland/window.rs
+index 7b375b615..b9ab06a43 100644
+--- a/window/src/os/wayland/window.rs
++++ b/window/src/os/wayland/window.rs
+@@ -557,7 +557,7 @@ pub(crate) fn dispatch_pending_mouse(&mut self) {
+         }
+
+         if let Some((value_x, value_y)) = PendingMouse::scroll(&pending_mouse) {
+-            let factor = self.get_dpi_factor() as f64;
++            let factor = self.get_dpi_factor() as f64 / 2f64;
+
+             if value_x.signum() != self.hscroll_remainder.signum() {
+                 // reset accumulator when changing scroll direction
