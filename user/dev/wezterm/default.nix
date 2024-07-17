@@ -1,9 +1,10 @@
 {
   lib,
   config,
+  userSettings,
   ...
 }: {
-  programs.wezterm = {
+  programs.wezterm = lib.mkIf (userSettings.terminal == "wezterm") {
     enable = true;
   };
 
