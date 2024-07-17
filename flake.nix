@@ -57,7 +57,10 @@
       username = "ugura";
       layout = "eu";
       shell = pkgs.zsh;
-      terminal = "wezterm";
+      # I'd use WezTerm, but the patch invalidates the NixOS cache and triggers a manual build.
+      # The latter takes AGES on this machine (and also fails right at the end it seems?)
+      # So stay on Konsole for now
+      terminal = "konsole";
     };
   in {
     # Formatter for my nix files, available through 'nix fmt'
