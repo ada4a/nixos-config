@@ -64,6 +64,7 @@ in {
             };
           }
           "org.kde.plasma.marginsseparator"
+          "de.davidhi.ddcci-brightness"
           {
             systemTray = {
               items.configs.battery.showPercentage = true;
