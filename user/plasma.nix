@@ -39,6 +39,8 @@ in {
       "kwinrc"."Effect-overview"."BorderActivate" = 9;
       "kxkbrc"."Layout"."ResetOldOptions" = true;
       "kxkbrc"."Layout"."Options" = "grp:win_space_toggle,caps:escape_shifted_capslock";
+      # https://discuss.kde.org/t/6-1-plasma-mouse-sticking-a-bit-more-to-screen-edges/17437/
+      "kwinrc"."EdgeBarrier"."EdgeBarrier" = 10;
     };
 
     shortcuts = {
