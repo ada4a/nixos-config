@@ -6,20 +6,22 @@
   # Unfortunately, there isn't a preferred://terminal, so emulate that
   # by mapping userSettings.terminal to the corresponding .desktop file
   terminal = let
+    inherit (userSettings) terminal;
     match_terminal = {
       "konsole" = "applications:org.kde.konsole.desktop";
       "wezterm" = "applications:org.wezfurlong.wezterm.desktop";
     };
   in
-    builtins.getAttr userSettings.terminal match_terminal;
+    builtins.getAttr terminal match_terminal;
 
   # similarly with preferred://terminal, but map $EDITOR instead
   editor = let
+    editor = config.home.sessionVariables.EDITOR;
     match_editor = {
       "nvim" = "applications:nvim.desktop";
     };
   in
-    builtins.getAttr config.home.sessionVariables.EDITOR match_editor;
+    builtins.getAttr editor match_editor;
 in {
   programs.plasma = {
     enable = true;
