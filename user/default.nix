@@ -4,7 +4,7 @@
     ./dev
     ./email.nix
     ./nix.nix
-    ./nixpkgs
+    ./nixpkgs.nix
     ./plasma.nix
   ];
 }
