@@ -1,8 +1,8 @@
-{flake_path, ...}: {
+{flakePath, ...}: {
   nixos.autoUpgrade = {
     enable = true;
     dates = "3 days";
-    flake = flake_path;
+    flake = flakePath;
   };
 
   nix.gc = {
