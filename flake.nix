@@ -22,20 +22,15 @@
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
     firefox-addons.inputs.flake-utils.follows = "flake-utils";
-
-    # My custom stuff
-    ugura-custom.url = "github:ugur-a/flake-custom";
-    ugura-custom.inputs.nixpkgs.follows = "nixpkgs";
-    ugura-custom.inputs.flake-utils.follows = "flake-utils";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     firefox-addons,
+    flake-utils,
     plasma-manager,
     lanzaboote,
-    ugura-custom,
     ...
   } @ inputs: let
     systemSettings = {
@@ -62,47 +57,67 @@
       # So stay on Konsole for now
       terminal = "konsole";
     };
-  in {
-    # Formatter for my nix files, available through 'nix fmt'
-    formatter.${systemSettings.system} = pkgs.alejandra;
+  in
+    # All of the custom stuff I export (and use myself)
+    ## System-specific outputs
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        # My custom packages, available through 'nix build', 'nix shell', etc
+        legacyPackages = import ./pkgs/legacy {inherit pkgs;};
 
-    # devShell for bootstrapping a configuration
-    devShells.${systemSettings.system} = import ./shell.nix {inherit pkgs;};
+        # My custom modules
+        nixosModules = import ./modules/nixos;
+        homeManagerModules = import ./modules/home;
+      }
+    )
+    ## System-independent ouputs
+    // {
+      overlays = import ./overlays {inherit inputs;};
 
-    nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
-      inherit (systemSettings) system;
+      templates = import ./templates;
+    }
+    # My actual config
+    // {
+      # Formatter for my nix files, available through 'nix fmt'
+      formatter.${systemSettings.system} = pkgs.alejandra;
 
-      modules = [
-        ./profiles/personal/configuration.nix
-        lanzaboote.nixosModules.lanzaboote
-      ];
+      # devShell for bootstrapping a configuration
+      devShells.${systemSettings.system} = import ./shell.nix {inherit pkgs;};
 
-      specialArgs = {
-        inherit ugura-custom;
-        inherit systemSettings;
-        inherit userSettings;
-        flakePath = inputs.self.outPath;
+      nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
+        inherit (systemSettings) system;
+
+        modules = [
+          ./profiles/personal/configuration.nix
+          lanzaboote.nixosModules.lanzaboote
+        ];
+
+        specialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          flakePath = inputs.self.outPath;
+        };
+      };
+
+      homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [
+          ./profiles/personal/home.nix
+          plasma-manager.homeManagerModules.plasma-manager
+        ];
+
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
+        extraSpecialArgs = {
+          inherit firefox-addons;
+          inherit systemSettings;
+          inherit userSettings;
+        };
       };
     };
-
-    homeConfigurations.${userSettings.username} = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-
-      # Specify your home configuration modules here, for example,
-      # the path to your home.nix.
-      modules = [
-        ./profiles/personal/home.nix
-        plasma-manager.homeManagerModules.plasma-manager
-      ];
-
-      # Optionally use extraSpecialArgs
-      # to pass through arguments to home.nix
-      extraSpecialArgs = {
-        inherit firefox-addons;
-        inherit ugura-custom;
-        inherit systemSettings;
-        inherit userSettings;
-      };
-    };
-  };
 }
