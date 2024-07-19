@@ -4,7 +4,7 @@
     ./nix-direnv.nix
     ./rust.nix
     ./git.nix
-    ./wezterm
+    ./wezterm.nix
     ./zellij
     ./zoxide.nix
     ./zsh.nix

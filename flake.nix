@@ -25,6 +25,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     home-manager,
     firefox-addons,
@@ -33,6 +34,8 @@
     lanzaboote,
     ...
   } @ inputs: let
+    inherit (self) outputs;
+
     systemSettings = {
       system = "x86_64-linux";
       bootMountPath = "/boot";
@@ -115,6 +118,7 @@
         # to pass through arguments to home.nix
         extraSpecialArgs = {
           inherit firefox-addons;
+          inherit outputs;
           inherit systemSettings;
           inherit userSettings;
         };

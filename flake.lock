@@ -277,8 +277,7 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
-        "plasma-manager": "plasma-manager",
-        "ugura-custom": "ugura-custom"
+        "plasma-manager": "plasma-manager"
       }
     },
     "rust-overlay": {
@@ -318,29 +317,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "ugura-custom": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1719419209,
-        "narHash": "sha256-zSVZ5hnAa3I0TlODb0Kpet6bYHo2EAJ0P7denJ6YmMs=",
-        "owner": "ugur-a",
-        "repo": "flake-custom",
-        "rev": "1801d4e52384ec0ec3b8f0df6be1e52ee3151c96",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ugur-a",
-        "repo": "flake-custom",
         "type": "github"
       }
     }
