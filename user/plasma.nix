@@ -41,6 +41,14 @@ in {
       "kxkbrc"."Layout"."Options" = "grp:win_space_toggle,caps:escape_shifted_capslock";
       # https://discuss.kde.org/t/6-1-plasma-mouse-sticking-a-bit-more-to-screen-edges/17437/
       "kwinrc"."EdgeBarrier"."EdgeBarrier" = 10;
+      "kwinrc"."NightColor" = {
+        "Active" = true;
+        "Mode" = "Location";
+        "LatitudeFixed" = 51;
+        "LongitudeFixed" = 7;
+        "DayTemperature" = 6300;
+        "NightTemperature" = 3700;
+      };
     };
 
     shortcuts = {
