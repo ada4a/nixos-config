@@ -15,7 +15,7 @@
     firefox-addons.inputs.flake-utils.follows = "flake-utils";
 
     # Secure Boot
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.3.0";
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.flake-utils.follows = "flake-utils";
 
