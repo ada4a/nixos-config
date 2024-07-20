@@ -1,4 +1,4 @@
-{...}: {
+{
   # disable this one, since the two conflict
   services.power-profiles-daemon.enable = false;
   services.tlp = {
