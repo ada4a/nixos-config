@@ -1,5 +1,5 @@
 {flakePath, ...}: {
-  nixos.autoUpgrade = {
+  system.autoUpgrade = {
     enable = true;
     dates = "3 days";
     flake = flakePath;
