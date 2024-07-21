@@ -21,9 +21,7 @@
     };
     extensions = with firefox-addons.packages.${systemSettings.system}; [
       bitwarden
-      # TODO enable this when the addon is added
-      # https://gitlab.com/rycee/nur-expressions/-/issues/233
-      # british-english-dictionary-2
+      british-english-dictionary-2
       clearurls
       darkreader
       dictionary-german
