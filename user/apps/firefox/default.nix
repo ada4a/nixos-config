@@ -31,7 +31,6 @@
       return-youtube-dislikes
       simple-tab-groups
       ublock-origin
-      vimium
       whowrotethat
     ];
   };
