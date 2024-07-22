@@ -59,6 +59,7 @@
       # The latter takes AGES on this machine (and also fails right at the end it seems?)
       # So stay on Konsole for now
       terminal = "konsole";
+      fonts.mono = "Cascadia Code";
     };
   in
     # All of the custom stuff I export (and use myself)
