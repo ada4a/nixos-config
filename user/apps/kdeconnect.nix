@@ -1,4 +1,11 @@
 {pkgs, ...}: {
+  services.kdeconnect = {
+    enable = true;
+    # use the Plasma 6 package
+    package = pkgs.kdePackages.kdeconnect-kde;
+    indicator = true;
+  };
+
   # Hide all .desktop entries, except for org.kde.kdeconnect.settings
   # https://github.com/Misterio77/nix-config/blob/main/home/misterio/features/desktop/common/kdeconnect.nix#L12
   xdg.desktopEntries = {
@@ -17,13 +24,6 @@
       name = "KDE Connect";
       settings.NoDisplay = "true";
     };
-  };
-
-  services.kdeconnect = {
-    enable = true;
-    # use the Plasma 6 package
-    package = pkgs.kdePackages.kdeconnect-kde;
-    indicator = true;
   };
 
   # Workaround for Failed to restart syncthingtray.service: Unit tray.target not found.
