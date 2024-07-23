@@ -1,5 +1,5 @@
 {
-  ugura-custom,
+  outputs,
   systemSettings,
   ...
-}: {environment.systemPackages = with ugura-custom.legacyPackages.${systemSettings.system}; [ddcci-plasmoid];}
+}: {environment.systemPackages = with outputs.legacyPackages.${systemSettings.system}; [ddcci-plasmoid];}

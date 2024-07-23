@@ -99,6 +99,7 @@
         ];
 
         specialArgs = {
+          inherit outputs;
           inherit systemSettings;
           inherit userSettings;
           flakePath = inputs.self.outPath;
