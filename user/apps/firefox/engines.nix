@@ -6,6 +6,17 @@ in {
     "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
     "Wikipedia (en)".metaData.alias = "@w";
 
+    # http://en.wiktionary.org/w/rest.php/v1/search
+    "Wiktionary (en)" = {
+      urls = [
+        {template = "https://en.wiktionary.org/w/index.php?title=Special:Search&search={searchTerms}";}
+        {template = "https://en.wiktionary.org/w/api.php?action=opensearch&search={searchTerms}&namespace=0";}
+      ];
+      iconUpdateURL = "https://en.wiktionary.org/static/favicon/wiktionary/en.ico";
+      inherit updateInterval;
+      definedAliases = ["@wt"];
+    };
+
     # https://docs.rs/-/static/opensearch.xml
     "Docs.rs" = {
       urls = [{template = "https://docs.rs/releases/search?query={searchTerms}";}];
