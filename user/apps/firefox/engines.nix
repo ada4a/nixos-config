@@ -44,7 +44,7 @@ in {
     "NixOS Wiki" = {
       urls = [
         {template = "https://wiki.nixos.org/w/index.php?search={searchTerms}";}
-        {template = "https://wiki.nixos.org/w/api.php?action=opensearch&amp;search={searchTerms}&amp;namespace=0";}
+        {template = "https://wiki.nixos.org/w/api.php?action=opensearch&search={searchTerms}&namespace=0";}
       ];
       iconUpdateURL = "https://wiki.nixos.org/favicon.png";
       inherit updateInterval;
