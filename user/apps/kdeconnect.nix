@@ -14,7 +14,7 @@ in {
   };
 
   # Hide all .desktop entries, except for org.kde.kdeconnect.settings
-  # https://github.com/Misterio77/nix-config/blob/main/home/misterio/features/desktop/common/kdeconnect.nix#L12
+  # https://github.com/Misterio77/nix-config/blob/583fc81349c57666df2b041fc2e224be65d2278f/home/gabriel/features/desktop/common/kdeconnect.nix
   xdg.desktopEntries = lib.mkIf cfg.enable {
     "org.kde.kdeconnect.sms" = {
       exec = "";
