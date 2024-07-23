@@ -10,5 +10,6 @@
     ./plasma.nix
     ./power.nix
     ./syncthing.nix
+    ./wayland.nix
   ];
 }
