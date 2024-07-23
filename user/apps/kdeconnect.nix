@@ -1,4 +1,11 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
+  cfg = config.services.kdeconnect;
+in {
   services.kdeconnect = {
     enable = true;
     # use the Plasma 6 package
@@ -8,7 +15,7 @@
 
   # Hide all .desktop entries, except for org.kde.kdeconnect.settings
   # https://github.com/Misterio77/nix-config/blob/main/home/misterio/features/desktop/common/kdeconnect.nix#L12
-  xdg.desktopEntries = {
+  xdg.desktopEntries = lib.mkIf cfg.enable {
     "org.kde.kdeconnect.sms" = {
       exec = "";
       name = "KDE Connect SMS";
@@ -28,7 +35,7 @@
 
   # Workaround for Failed to restart syncthingtray.service: Unit tray.target not found.
   # Reference: https://github.com/nix-community/home-manager/issues/2064
-  systemd.user.targets.tray = {
+  systemd.user.targets.tray = lib.mkIf cfg.enable {
     Unit = {
       Description = "Home Manager System Tray";
       Requires = ["graphical-session-pre.target"];
