@@ -1,6 +1,4 @@
-{
-  # disable this one, since the two conflict
-  services.power-profiles-daemon.enable = true;
+{config, ...}: {
   services.tlp = {
     enable = false;
     settings = {
@@ -16,4 +14,7 @@
       CPU_MAX_PERF_ON_BAT = 100;
     };
   };
+
+  # make sure to only enable one at a time, since the two conflict
+  services.power-profiles-daemon.enable = ! config.services.tlp.enable;
 }
