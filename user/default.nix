@@ -6,6 +6,6 @@
     ./fonts.nix
     ./nix.nix
     ./nixpkgs.nix
-    ./plasma.nix
+    ./plasma
   ];
 }
