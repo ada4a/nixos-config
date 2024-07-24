@@ -28,6 +28,7 @@ in {
       location = "bottom";
       floating = true;
       height = 42;
+      screen = 0;
       widgets = [
         "org.kde.plasma.kickoff"
         "org.kde.plasma.showActivityManager"
