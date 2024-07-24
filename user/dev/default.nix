@@ -3,6 +3,7 @@
     ./editors
     ./nix-direnv.nix
     ./rust.nix
+    ./oh-my-posh.nix
     ./git.nix
     ./wezterm.nix
     ./zellij
