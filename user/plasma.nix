@@ -41,6 +41,8 @@ in {
       "kxkbrc"."Layout"."Options" = "grp:win_space_toggle,caps:escape_shifted_capslock";
       # https://discuss.kde.org/t/6-1-plasma-mouse-sticking-a-bit-more-to-screen-edges/17437/
       "kwinrc"."EdgeBarrier"."EdgeBarrier" = 10;
+      # disable the reminder for Plasma Integration
+      "plasmanotifyrc"."Applications/firefox"."Seen" = true;
     };
 
     kwin.nightLight = {
