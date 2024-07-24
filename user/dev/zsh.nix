@@ -9,7 +9,6 @@
       path = "${config.xdg.stateHome}/zsh/history";
       ignoreAllDups = true;
     };
-    historySubstringSearch.enable = true;
 
     shellAliases = {
       cat = "bat";
@@ -41,6 +40,11 @@
       zstyle ':completion:*' menu no
       zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
       zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+      # Search history by prefix
+      # Stolen from: ditto
+      bindkey '^p' history-search-backward
+      bindkey '^n' history-search-forward
     '';
   };
 }
