@@ -22,6 +22,10 @@
     plasma-manager.url = "github:nix-community/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
+
+    stylix.url = "github:danth/stylix";
+    stylix.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.inputs.home-manager.follows = "home-manager";
   };
 
   outputs = {
@@ -32,6 +36,7 @@
     flake-utils,
     lanzaboote,
     plasma-manager,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -114,6 +119,7 @@
         modules = [
           ./profiles/personal/home.nix
           plasma-manager.homeManagerModules.plasma-manager
+          stylix.homeManagerModules.stylix
         ];
 
         # Optionally use extraSpecialArgs
