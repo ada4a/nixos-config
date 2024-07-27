@@ -1,4 +1,10 @@
 {
+  lib,
+  config,
+  ...
+}: let
+  cfg = config.programs.plasma;
+in {
   imports = [
     ./rc2nix.nix
 
@@ -38,5 +44,9 @@
     workspace = {
       clickItemTo = "select";
     };
+  };
+
+  xdg.configFile = lib.mkIf cfg.enable {
+    "PlasmaUserFeedback".text = lib.generators.toINI {} {Global.FeedbackLevel = 64;};
   };
 }
