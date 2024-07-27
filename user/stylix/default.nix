@@ -1,4 +1,5 @@
 {
+  lib,
   userSettings,
   pkgs,
   ...
@@ -20,6 +21,18 @@ in {
 
     fonts = {
       monospace = fontToNameAndPackage userSettings.fonts.mono;
+    };
+
+    targets = {
+      # this puts the config file even though I don't use anything Hyprland?
+      hyprpaper.enable = lib.mkForce false;
+      # breaks without this disabled
+      hyprland.enable = lib.mkForce false;
+
+      # turn this off while I'm still figuring things out with (kickstart.)nixvim..
+      nixvim.enable = lib.mkForce false;
+      # breaks (init.lua gets replaced) without this disabled
+      vim.enable = lib.mkForce false;
     };
   };
 }
