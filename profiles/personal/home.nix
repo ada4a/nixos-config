@@ -82,9 +82,12 @@
 
   home.preferXdgDirectories = true;
 
-  xdg.mimeApps.defaultApplications = {
-    "text/*" = ["nvim.desktop"];
-    "application/pdf" = ["okular.desktop"];
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/*" = ["nvim.desktop"];
+      "application/pdf" = ["okular.desktop"];
+    };
   };
 
   # Let Home Manager install and manage itself.
