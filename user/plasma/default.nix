@@ -26,6 +26,7 @@
       "kwinrc"."EdgeBarrier"."EdgeBarrier" = 10;
       # disable the reminder for Plasma Integration
       "plasmanotifyrc"."Applications/firefox"."Seen" = true;
+      "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
     };
 
     workspace = {
