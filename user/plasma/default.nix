@@ -1,5 +1,7 @@
 {
   imports = [
+    ./rc2nix.nix
+
     ./night-light.nix
     ./panels.nix
     ./shortcuts.nix
