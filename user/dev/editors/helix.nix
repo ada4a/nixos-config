@@ -1,3 +1,1 @@
-{
-  programs.helix.enable = false;
-}
+{ programs.helix.enable = false; }

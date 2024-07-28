@@ -1,6 +1,8 @@
-{userSettings, ...}: let
+{ userSettings, ... }:
+let
   inherit (userSettings) username;
-in {
+in
+{
   services.syncthing = {
     enable = true;
     user = username;
@@ -25,7 +27,10 @@ in {
         # };
         "Library" = {
           path = "~/Documents/Library";
-          devices = ["samsung" "ipad"];
+          devices = [
+            "samsung"
+            "ipad"
+          ];
         };
       };
     };

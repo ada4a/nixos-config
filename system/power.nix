@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   services.tlp = {
     enable = false;
     settings = {
@@ -16,5 +17,5 @@
   };
 
   # make sure to only enable one at a time, since the two conflict
-  services.power-profiles-daemon.enable = ! config.services.tlp.enable;
+  services.power-profiles-daemon.enable = !config.services.tlp.enable;
 }

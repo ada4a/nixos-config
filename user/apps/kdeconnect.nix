@@ -3,9 +3,11 @@
   lib,
   config,
   ...
-}: let
+}:
+let
   cfg = config.services.kdeconnect;
-in {
+in
+{
   services.kdeconnect = {
     enable = true;
     # use the Plasma 6 package
@@ -38,7 +40,7 @@ in {
   systemd.user.targets.tray = lib.mkIf cfg.enable {
     Unit = {
       Description = "Home Manager System Tray";
-      Requires = ["graphical-session-pre.target"];
+      Requires = [ "graphical-session-pre.target" ];
     };
   };
 }

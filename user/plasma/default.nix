@@ -1,10 +1,8 @@
-{
-  lib,
-  config,
-  ...
-}: let
+{ lib, config, ... }:
+let
   cfg = config.programs.plasma;
-in {
+in
+{
   imports = [
     ./rc2nix.nix
 
@@ -24,7 +22,7 @@ in {
       "kcminputrc"."Libinput/1267/12553/ELAN2204:00 04F3:3109 Touchpad" = {
         "ClickMethod" = 2; # tap-to-click
         "NaturalScroll" = true;
-        "PointerAcceleration" = 0.200;
+        "PointerAcceleration" = 0.2;
       };
       # disable the hot corner (aka. Screen Edge)
       "kwinrc"."Effect-overview"."BorderActivate" = 9;
@@ -48,6 +46,6 @@ in {
   };
 
   xdg.configFile = lib.mkIf cfg.enable {
-    "PlasmaUserFeedback".text = lib.generators.toINI {} {Global.FeedbackLevel = 64;};
+    "PlasmaUserFeedback".text = lib.generators.toINI { } { Global.FeedbackLevel = 64; };
   };
 }

@@ -1,9 +1,11 @@
-{userSettings, ...}: let
+{ userSettings, ... }:
+let
   signature = ''
     Mit freundlichen Grüßen
     ${userSettings.name}
   '';
-in {
+in
+{
   accounts.email.accounts = {
     "gmail" = {
       address = userSettings.gmail;

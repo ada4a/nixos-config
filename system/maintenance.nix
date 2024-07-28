@@ -1,4 +1,5 @@
-{flakePath, ...}: {
+{ flakePath, ... }:
+{
   system.autoUpgrade = {
     enable = true;
     dates = "3 days";
@@ -13,6 +14,6 @@
 
   nix.optimise = {
     automatic = true;
-    dates = ["weekly"];
+    dates = [ "weekly" ];
   };
 }

@@ -1,8 +1,5 @@
+{ pkgs, userSettings, ... }:
 {
-  pkgs,
-  userSettings,
-  ...
-}: {
   services.espanso = {
     enable = true;
     package = pkgs.espanso-wayland;

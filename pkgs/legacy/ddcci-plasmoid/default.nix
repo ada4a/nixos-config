@@ -39,6 +39,6 @@ stdenvNoCC.mkDerivation rec {
     homepage = "https://github.com/davidhi7/ddcci-plasmoid";
     license = licenses.mit;
     platforms = platforms.linux;
-    maintainers = with maintainers; [sund3RRR];
+    maintainers = with maintainers; [ sund3RRR ];
   };
 }

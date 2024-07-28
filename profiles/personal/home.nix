@@ -3,7 +3,8 @@
   systemSettings,
   userSettings,
   ...
-}: {
+}:
+{
   home = {
     inherit (userSettings) username;
     homeDirectory = "/home/" + userSettings.username;
@@ -15,9 +16,7 @@
     frequency = "weekly";
   };
 
-  imports = [
-    ../../user
-  ];
+  imports = [ ../../user ];
 
   # Install Nix packages into the environment
   home.packages = with pkgs; [
@@ -85,8 +84,8 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "text/*" = ["nvim.desktop"];
-      "application/pdf" = ["okular.desktop"];
+      "text/*" = [ "nvim.desktop" ];
+      "application/pdf" = [ "okular.desktop" ];
     };
   };
 

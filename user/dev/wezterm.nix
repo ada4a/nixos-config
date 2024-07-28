@@ -1,9 +1,4 @@
+{ lib, userSettings, ... }:
 {
-  lib,
-  userSettings,
-  ...
-}: {
-  programs.wezterm = lib.mkIf (userSettings.terminal == "wezterm") {
-    enable = true;
-  };
+  programs.wezterm = lib.mkIf (userSettings.terminal == "wezterm") { enable = true; };
 }

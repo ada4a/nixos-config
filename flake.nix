@@ -24,52 +24,56 @@
     plasma-manager.inputs.home-manager.follows = "home-manager";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    firefox-addons,
-    flake-utils,
-    lanzaboote,
-    plasma-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      firefox-addons,
+      flake-utils,
+      lanzaboote,
+      plasma-manager,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
 
-    systemSettings = {
-      system = "x86_64-linux";
-      bootMountPath = "/boot";
-      hostname = "magicbook";
-      timezone = "Europe/Berlin";
-      locale = "en_IE.UTF-8";
-      stateVersion = "23.11";
-    };
+      systemSettings = {
+        system = "x86_64-linux";
+        bootMountPath = "/boot";
+        hostname = "magicbook";
+        timezone = "Europe/Berlin";
+        locale = "en_IE.UTF-8";
+        stateVersion = "23.11";
+      };
 
-    pkgs = nixpkgs.legacyPackages.${systemSettings.system};
+      pkgs = nixpkgs.legacyPackages.${systemSettings.system};
 
-    userSettings = {
-      gmail = "ugur.alekperov@gmail.com";
-      rmail = "ughur.alakbarov@rwth-aachen.de";
-      pmail = "ugur.alekperov@protonmail.com";
-      name = "Ughur Alakbarov";
-      username = "ugura";
-      layout = "eu";
-      shell = pkgs.zsh;
-      # I'd use WezTerm, but the patch invalidates the NixOS cache and triggers a manual build.
-      # The latter takes AGES on this machine (and also fails right at the end it seems?)
-      # So stay on Konsole for now
-      terminal = "konsole";
-      fonts.mono = "Cascadia Code";
-    };
-  in
+      userSettings = {
+        gmail = "ugur.alekperov@gmail.com";
+        rmail = "ughur.alakbarov@rwth-aachen.de";
+        pmail = "ugur.alekperov@protonmail.com";
+        name = "Ughur Alakbarov";
+        username = "ugura";
+        layout = "eu";
+        shell = pkgs.zsh;
+        # I'd use WezTerm, but the patch invalidates the NixOS cache and triggers a manual build.
+        # The latter takes AGES on this machine (and also fails right at the end it seems?)
+        # So stay on Konsole for now
+        terminal = "konsole";
+        fonts.mono = "Cascadia Code";
+      };
+    in
     # All of the custom stuff I export (and use myself)
     ## System-specific outputs
     flake-utils.lib.eachDefaultSystem (
-      system: let
+      system:
+      let
         pkgs = nixpkgs.legacyPackages.${system};
-      in {
+      in
+      {
         # My custom packages, available through 'nix build', 'nix shell', etc
-        legacyPackages = import ./pkgs/legacy {inherit pkgs;};
+        legacyPackages = import ./pkgs/legacy { inherit pkgs; };
 
         # My custom modules
         nixosModules = import ./modules/nixos;
@@ -78,7 +82,7 @@
     )
     ## System-independent ouputs
     // {
-      overlays = import ./overlays {inherit inputs;};
+      overlays = import ./overlays { inherit inputs; };
 
       templates = import ./templates;
     }
@@ -88,7 +92,7 @@
       formatter.${systemSettings.system} = pkgs.nixfmt-rfc-style;
 
       # devShell for bootstrapping a configuration
-      devShells.${systemSettings.system} = import ./shell.nix {inherit pkgs;};
+      devShells.${systemSettings.system} = import ./shell.nix { inherit pkgs; };
 
       nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
         inherit (systemSettings) system;

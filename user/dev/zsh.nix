@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   programs.zsh = {
     enable = true;
 
@@ -28,8 +29,13 @@
       enable = true;
       plugins =
         # OhMyZsh
-        map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") ["git" "rust" "sudo" "systemd"]
-        ++ ["Aloxaf/fzf-tab"];
+        map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") [
+          "git"
+          "rust"
+          "sudo"
+          "systemd"
+        ]
+        ++ [ "Aloxaf/fzf-tab" ];
     };
 
     initExtra = ''

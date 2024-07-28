@@ -8,13 +8,13 @@
       lightness = 0.65;
       color_align = {
         mode = "horizontal";
-        custom_colors = [];
+        custom_colors = [ ];
         fore_back = null;
       };
       backend = "neofetch";
       args = null;
       distro = null;
-      pride_month_shown = [];
+      pride_month_shown = [ ];
       pride_month_disable = false;
     };
   };

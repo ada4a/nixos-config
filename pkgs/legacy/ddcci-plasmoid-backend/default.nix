@@ -26,20 +26,14 @@ python3Packages.buildPythonPackage rec {
     poetry-core
   ];
 
-  pythonRelaxDeps = [
-    "fasteners"
-  ];
+  pythonRelaxDeps = [ "fasteners" ];
 
-  propagatedBuildInputs = with python3Packages; [
-    fasteners
-  ];
+  propagatedBuildInputs = with python3Packages; [ fasteners ];
 
-  nativeCheckInputs = with python3Packages; [
-    pytestCheckHook
-  ];
+  nativeCheckInputs = with python3Packages; [ pytestCheckHook ];
 
   preFixup = ''
-    makeWrapperArgs+=(--prefix PATH : ${lib.makeBinPath [ddcutil]})
+    makeWrapperArgs+=(--prefix PATH : ${lib.makeBinPath [ ddcutil ]})
   '';
 
   meta = with lib; {
@@ -47,6 +41,6 @@ python3Packages.buildPythonPackage rec {
     homepage = "https://github.com/davidhi7/ddcci-plasmoid";
     license = licenses.mit;
     platforms = platforms.linux;
-    maintainers = with maintainers; [sund3RRR];
+    maintainers = with maintainers; [ sund3RRR ];
   };
 }

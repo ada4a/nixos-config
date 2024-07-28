@@ -4,7 +4,7 @@
       description = "When opening a console, go to Activity \"Default\"";
       match = {
         window-class = "konsole";
-        window-types = ["normal"];
+        window-types = [ "normal" ];
       };
       # apply = {
       #   activity = <activity UUID>; # move to the activity with this UUID?
@@ -15,7 +15,7 @@
       description = "Share Firefox across Activities";
       match = {
         window-class = "firefox";
-        window-types = ["normal"];
+        window-types = [ "normal" ];
       };
       # apply = {
       #   activity = "00000000-0000-0000-0000-000000000000" (move to all activities? i.e. share across activities);
@@ -26,7 +26,7 @@
       description = "Share Obsidian across Activities";
       match = {
         window-class = "obsidian";
-        window-types = ["normal"];
+        window-types = [ "normal" ];
       };
       # apply = {
       #   activity = "00000000-0000-0000-0000-000000000000" (move to all activities? i.e. share across activities);

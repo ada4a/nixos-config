@@ -6,10 +6,9 @@
   systemSettings,
   userSettings,
   ...
-}: {
-  imports = [
-    ../../system
-  ];
+}:
+{
+  imports = [ ../../system ];
 
   # Bootloader.
   boot.loader = {
@@ -31,7 +30,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = systemSettings.locale;
-  i18n.supportedLocales = ["${systemSettings.locale}/UTF-8"]; # make sure the locale is installed
+  i18n.supportedLocales = [ "${systemSettings.locale}/UTF-8" ]; # make sure the locale is installed
 
   # Wayland
   security.polkit.enable = true;
@@ -64,7 +63,10 @@
   users.users.${userSettings.username} = {
     isNormalUser = true;
     description = userSettings.name;
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     inherit (userSettings) shell;
     hashedPassword = "$y$j9T$8ujHxGIKBXZLj.L/UGKWc0$PFKbDL1Bl2kr9Ovx.NVNw7FkIOHLZgF7OQ0eIwEBx66";
   };
@@ -114,7 +116,7 @@
   services.qemuGuest.enable = true;
 
   # Envvars
-  environment.sessionVariables = {};
+  environment.sessionVariables = { };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -136,5 +138,7 @@
   # networking.firewall.enable = false;
 
   # It's ok to leave this unchanged for compatibililty reasons
-  system = {inherit (systemSettings) stateVersion;};
+  system = {
+    inherit (systemSettings) stateVersion;
+  };
 }

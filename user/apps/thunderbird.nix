@@ -1,4 +1,5 @@
-{userSettings, ...}: {
+{ userSettings, ... }:
+{
   programs.thunderbird = {
     enable = true;
     profiles."${userSettings.username}" = {
