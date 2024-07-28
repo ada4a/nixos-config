@@ -35,7 +35,7 @@
 
   # Wayland
   security.polkit.enable = true;
-  hardware.opengl.enable = true; # when using QEMU KVM
+  hardware.graphics.enable = true; # when using QEMU KVM
 
   # The X11 windowing system.
   services.xserver.enable = true;
