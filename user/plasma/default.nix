@@ -43,6 +43,7 @@ in {
 
     workspace = {
       clickItemTo = "select";
+      wallpaper = ../wallpaper.jpg;
     };
   };
 
