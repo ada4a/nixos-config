@@ -2,7 +2,7 @@
 {
   system.autoUpgrade = {
     enable = true;
-    dates = "3 days";
+    dates = "Mon,Thu";
     flake = flakePath;
   };
 
