@@ -4,6 +4,7 @@
     ./editors
 
     ./git.nix
+    ./lazygit.nix
     ./nix-direnv.nix
     ./oh-my-posh.nix
     ./rust.nix
@@ -15,7 +16,6 @@
 
   home.packages = with pkgs; [
     gdbgui
-    lazygit
     bacon
   ];
 }
