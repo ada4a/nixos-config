@@ -2,10 +2,11 @@
 {
   imports = [
     ./editors
-    ./nix-direnv.nix
-    ./rust.nix
-    ./oh-my-posh.nix
+
     ./git.nix
+    ./nix-direnv.nix
+    ./oh-my-posh.nix
+    ./rust.nix
     ./wezterm.nix
     ./zellij
     ./zoxide.nix
