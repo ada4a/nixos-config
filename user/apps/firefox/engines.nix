@@ -83,8 +83,11 @@ in
     };
 
     # https://home-manager-options.extranix.com/opensearch.xml
+    # `release=master` sarches in unstable
     "Home Manager - Options Search" = {
-      urls = [ { template = "https://home-manager-options.extranix.com/?query={searchTerms}"; } ];
+      urls = [
+        { template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=master"; }
+      ];
       iconUpdateURL = "https://home-manager-options.extranix.com/images/favicon.png";
       inherit updateInterval;
       definedAliases = [ "@hm" ];
