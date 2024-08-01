@@ -38,7 +38,6 @@
     libreoffice
     ticktick
     spotify
-    steam
 
     # CLI
 

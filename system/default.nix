@@ -9,6 +9,7 @@
     ./nix.nix
     ./plasma.nix
     ./power.nix
+    ./steam.nix
     ./syncthing.nix
     ./wayland.nix
   ];
