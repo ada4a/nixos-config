@@ -35,6 +35,7 @@
     #floorp
     kdePackages.korganizer
     krename
+    libreoffice
     ticktick
     spotify
     steam
