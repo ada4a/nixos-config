@@ -31,7 +31,7 @@
 
     ausweisapp
     bitwarden
-    filelight
+    kdePackages.filelight
     #floorp
     kdePackages.korganizer
     krename
