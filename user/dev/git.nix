@@ -15,5 +15,6 @@
       core.editor = "nvim";
       merge.tool = "meld";
     };
+    lfs.enable = true;
   };
 }
