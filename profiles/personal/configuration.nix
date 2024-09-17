@@ -133,7 +133,5 @@
   # networking.firewall.enable = false;
 
   # It's ok to leave this unchanged for compatibililty reasons
-  system = {
-    inherit (systemSettings) stateVersion;
-  };
+  system.stateVersion = systemSettings.stateVersion;
 }
