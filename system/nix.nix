@@ -7,7 +7,7 @@
   };
 
   nix.settings = {
-    experimental-features = [
+    extra-experimental-features = [
       "nix-command"
       "flakes"
     ];
