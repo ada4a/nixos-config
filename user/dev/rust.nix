@@ -5,6 +5,7 @@
     cargo-flamegraph
     cargo-generate
     cargo-modules
+    cargo-nextest
     clippy
     rustc
   ];
