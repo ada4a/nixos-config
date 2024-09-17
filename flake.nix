@@ -104,10 +104,12 @@
         ];
 
         specialArgs = {
-          inherit inputs;
-          inherit outputs;
-          inherit systemSettings;
-          inherit userSettings;
+          inherit
+            inputs
+            outputs
+            systemSettings
+            userSettings
+            ;
         };
       };
 
@@ -124,10 +126,12 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
         extraSpecialArgs = {
-          inherit inputs;
-          inherit outputs;
-          inherit systemSettings;
-          inherit userSettings;
+          inherit
+            inputs
+            outputs
+            systemSettings
+            userSettings
+            ;
         };
       };
     };
