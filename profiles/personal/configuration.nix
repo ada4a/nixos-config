@@ -35,12 +35,9 @@
   security.polkit.enable = true;
   hardware.graphics.enable = true; # when using QEMU KVM
 
-  # The X11 windowing system.
-  services.xserver.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "eu,ru";
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
