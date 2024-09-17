@@ -1,9 +1,12 @@
 {
-  firefox-addons,
+  inputs,
   systemSettings,
   userSettings,
   ...
 }:
+let
+  firefox-addons = inputs.firefox-addons.packages.${systemSettings.system};
+in
 {
   imports = [ ./engines.nix ];
 
@@ -18,7 +21,7 @@
     settings = {
       "widget.use-xdg-desktop-portal.file-picker" = "1";
     };
-    extensions = with firefox-addons.packages.${systemSettings.system}; [
+    extensions = with firefox-addons; [
       bitwarden
       british-english-dictionary-2
       clearurls

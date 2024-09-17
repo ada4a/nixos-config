@@ -31,7 +31,6 @@
       self,
       nixpkgs,
       home-manager,
-      firefox-addons,
       flake-utils,
       lanzaboote,
       plasma-manager,
@@ -109,7 +108,6 @@
           inherit outputs;
           inherit systemSettings;
           inherit userSettings;
-          flakePath = inputs.self.outPath;
         };
       };
 
@@ -126,7 +124,7 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
         extraSpecialArgs = {
-          inherit firefox-addons;
+          inherit inputs;
           inherit outputs;
           inherit systemSettings;
           inherit userSettings;

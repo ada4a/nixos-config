@@ -1,5 +1,6 @@
-{ flakePath, ... }:
+{ inputs, ... }:
 let
+  flakePath = inputs.self.outPath;
   randomizedDelaySec = "45min";
 in
 {
