@@ -30,7 +30,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = systemSettings.locale;
-  i18n.supportedLocales = [ "${systemSettings.locale}/UTF-8" ]; # make sure the locale is installed
 
   # Wayland
   security.polkit.enable = true;
