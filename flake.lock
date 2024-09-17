@@ -204,6 +204,27 @@
         "type": "github"
       }
     },
+    "nixpkgs-unfree": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1726582914,
+        "narHash": "sha256-jN6YtxpTYHWCvGqkgTH++n3lkP2/GTNMFLqGpy+YfUU=",
+        "owner": "numtide",
+        "repo": "nixpkgs-unfree",
+        "rev": "57e2a9cc35c57379ec7267444176ed3f8ad2b4c6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs-unfree",
+        "type": "github"
+      }
+    },
     "plasma-manager": {
       "inputs": {
         "home-manager": [
@@ -261,6 +282,7 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-unfree": "nixpkgs-unfree",
         "plasma-manager": "plasma-manager"
       }
     },

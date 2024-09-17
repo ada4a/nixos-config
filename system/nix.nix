@@ -1,9 +1,19 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   nix = {
     package = pkgs.nixFlakes;
     # Opinionated: disable channels^[1]
     channel.enable = false;
+    # allows accessing unfree packages in `nix run` and friends
+    # Example: `nix shell nixpkgs-unfree#gurobi`
+    # https://discourse.nixos.org/t/permanently-enabling-unfree-packages-for-nix-profile-system-config-uses-flake/44394/2
+    registry."nixpkgs-unfree" = {
+      from = {
+        id = "nixpkgs-unfree";
+        type = "indirect";
+      };
+      flake = inputs.nixpkgs-unfree;
+    };
   };
 
   nix.settings = {

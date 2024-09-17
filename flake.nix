@@ -3,6 +3,8 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree/nixos-unstable";
+    nixpkgs-unfree.inputs.nixpkgs.follows = "nixpkgs";
     # only add this so that all the other inputs follow it
     flake-utils.url = "github:numtide/flake-utils";
 
@@ -103,6 +105,7 @@
         ];
 
         specialArgs = {
+          inherit inputs;
           inherit outputs;
           inherit systemSettings;
           inherit userSettings;
