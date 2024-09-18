@@ -17,9 +17,4 @@ in
     options = "--delete-older-than 30d";
     inherit randomizedDelaySec;
   };
-
-  nix.optimise = {
-    automatic = true;
-    dates = [ "weekly" ];
-  };
 }
