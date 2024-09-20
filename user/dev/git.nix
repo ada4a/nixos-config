@@ -14,6 +14,7 @@
       blame.ignoreRevsFile = ".git-blame-ignore-revs";
       core.editor = "nvim";
       merge.tool = "meld";
+      rerere.enabled = true;
     };
     lfs.enable = true;
   };
