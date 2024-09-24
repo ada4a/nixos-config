@@ -283,7 +283,8 @@
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unfree": "nixpkgs-unfree",
-        "plasma-manager": "plasma-manager"
+        "plasma-manager": "plasma-manager",
+        "xhmm": "xhmm"
       }
     },
     "rust-overlay": {
@@ -325,8 +326,23 @@
         "repo": "default",
         "type": "github"
       }
+    },
+    "xhmm": {
+      "locked": {
+        "lastModified": 1712416399,
+        "narHash": "sha256-Gvzs+lXHLVUw9V4LhRSvbYByg4CcLtycFnF0Bv16FBA=",
+        "owner": "schuelermine",
+        "repo": "xhmm",
+        "rev": "df7faec97e4a7d8c67a2b78ed194f9135428e31a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "xhmm",
+        "type": "github"
+      }
     }
   },
-  "root" : "root",
-  "version" : 7
+  "root": "root",
+  "version": 7
 }
