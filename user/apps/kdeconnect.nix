@@ -9,7 +9,7 @@ let
 in
 {
   services.kdeconnect = {
-    enable = true;
+    enable = false; # currently broken
     # use the Plasma 6 package
     package = pkgs.kdePackages.kdeconnect-kde;
     indicator = true;

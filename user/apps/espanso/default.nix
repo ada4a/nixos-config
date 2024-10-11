@@ -1,7 +1,7 @@
 { pkgs, userSettings, ... }:
 {
   services.espanso = {
-    enable = true;
+    enable = false; # currently broken
     package = pkgs.espanso-wayland;
     configs = {
       default = {
