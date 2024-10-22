@@ -30,10 +30,7 @@
     obsidian
 
     ausweisapp
-    # TODO: re-enable when no longer broken
-    # ref: https://github.com/NixOS/nixpkgs/pull/348862
-    #
-    # bitwarden
+    bitwarden
     kdePackages.filelight
     #floorp
     kdePackages.korganizer
