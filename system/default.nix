@@ -2,7 +2,6 @@
   imports = [
     ./bluetooth.nix
     ./certificates
-    ./ddcci-plasmoid.nix
     #./flatpak.nix
     ./hardware-configuration.nix
     ./maintenance.nix
