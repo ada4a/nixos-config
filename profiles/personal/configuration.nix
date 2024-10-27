@@ -86,6 +86,7 @@
   environment.systemPackages = with pkgs; [
     # CLI tools
     bat
+    btop
     eza
     du-dust
     fastmod
