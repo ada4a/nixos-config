@@ -35,7 +35,6 @@
   security.polkit.enable = true;
   hardware.graphics.enable = true; # when using QEMU KVM
 
-
   # Configure keymap in X11
   services.xserver.xkb.layout = "eu,ru";
   # Enable CUPS to print documents.
@@ -68,7 +67,10 @@
     hashedPassword = "$y$j9T$8ujHxGIKBXZLj.L/UGKWc0$PFKbDL1Bl2kr9Ovx.NVNw7FkIOHLZgF7OQ0eIwEBx66";
   };
   # don't forget to actually enable the user shell!
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = false;
+  };
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin = {
