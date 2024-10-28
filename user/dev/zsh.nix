@@ -5,6 +5,7 @@
 
     autocd = true;
     autosuggestion.enable = true;
+    enableCompletion = false;
     syntaxHighlighting.enable = true;
 
     history = {
