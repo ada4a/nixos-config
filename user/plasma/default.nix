@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  systemSettings,
+  ...
+}:
 let
   cfg = config.programs.plasma;
 in
@@ -14,7 +19,8 @@ in
   ];
 
   programs.plasma = {
-    enable = true;
+    # there's no way to configure Cosmic on user-level (=home-manager) (yet?)
+    enable = (systemSettings.de == "plasma");
     overrideConfig = true;
 
     configFile = {

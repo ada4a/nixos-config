@@ -6,7 +6,7 @@
     ./hardware-configuration.nix
     ./maintenance.nix
     ./nix.nix
-    ./plasma.nix
+    ./desktop_environments
     ./power.nix
     ./steam.nix
     ./syncthing.nix
