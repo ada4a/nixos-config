@@ -83,7 +83,7 @@ in
     };
 
     # https://home-manager-options.extranix.com/opensearch.xml
-    # `release=master` sarches in unstable
+    # `release=master` searches in unstable
     "Home Manager - Options Search" = {
       urls = [
         { template = "https://home-manager-options.extranix.com/?query={searchTerms}&release=master"; }
