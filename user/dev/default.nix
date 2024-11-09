@@ -5,6 +5,7 @@
 
     ./git.nix
     ./lazygit.nix
+    ./mergiraf.nix
     ./nix-direnv.nix
     ./oh-my-posh.nix
     ./rust.nix
