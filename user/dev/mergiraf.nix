@@ -1,9 +1,6 @@
-{ outputs, systemSettings, ... }:
-let
-  mergiraf = outputs.legacyPackages.${systemSettings.system}.mergiraf;
-in
+{ pkgs, ... }:
 {
-  home.packages = [ mergiraf ];
+  home.packages = with pkgs; [ mergiraf ];
 
   programs.git = {
 
