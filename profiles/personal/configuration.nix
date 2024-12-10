@@ -17,6 +17,14 @@
     efi.efiSysMountPoint = systemSettings.bootMountPath;
   };
 
+  # FIXME: config this in hardware-configuration.nix on next system reinstall
+  swapDevices = [
+    {
+      device = "/swapfile";
+      size = 8 * 1024;
+    }
+  ];
+
   networking.hostName = systemSettings.hostname;
   networking.networkmanager.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
