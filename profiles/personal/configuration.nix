@@ -31,7 +31,7 @@
   # Select internationalisation properties.
   i18n.defaultLocale = systemSettings.locale;
   # it looks like specifically LC_ALL doesn't get set by the above?
-  # so set it explicitely 
+  # so set it explicitly
   i18n.extraLocaleSettings = {
     LC_ALL = systemSettings.locale;
   };
