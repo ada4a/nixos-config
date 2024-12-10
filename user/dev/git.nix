@@ -13,6 +13,7 @@
       init.defaultBranch = "main";
       blame.ignoreRevsFile = ".git-blame-ignore-revs";
       core.editor = "nvim";
+      merge.conflictstyle = "diff3";
       merge.tool = "meld";
       rerere.enabled = true;
     };
