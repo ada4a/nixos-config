@@ -7,5 +7,6 @@
     ./nix.nix
     ./nixpkgs.nix
     ./plasma
+    ./xdg.nix
   ];
 }
