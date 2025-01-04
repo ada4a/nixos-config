@@ -80,7 +80,8 @@
     layout = "eu,ru";
   };
 
-  home.preferXdgDirectories = true;
+  # causes a bajillion warnings: https://github.com/nix-community/home-manager/issues/5805
+  # home.preferXdgDirectories = true;
 
   xdg.mimeApps = {
     enable = true;
