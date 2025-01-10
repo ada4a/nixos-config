@@ -31,7 +31,7 @@
   programs.zsh.initExtra = lib.mkIf config.programs.direnv.enable ''
     flakify() {
         if [ ! -e flake.nix ]; then
-            nix flake new -t github:ugur-a/nixos-config#nix-direnv .
+            nix flake new -t github:ada4a/nixos-config#nix-direnv .
         elif [ ! -e .envrc ]; then
             echo "use flake" > .envrc
             direnv allow

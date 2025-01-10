@@ -5,7 +5,7 @@ nix-shell -p git
 ```
 2. clone the repo and cd into it
 ```
-git clone https://github.com/ugur-a/nixos-config .dotfiles && cd .dotfiles
+git clone https://github.com/ada4a/nixos-config .dotfiles && cd .dotfiles
 ```
 3. move hardware-configuration.nix to the correct location
 ```
@@ -31,8 +31,8 @@ sudo reboot
 ```
 ### TODOs after that
 - import the SSH key from the secret location
-- clone the [LazyVim config](https://github.com/ugur-a/lazyvim)
+- clone the [LazyVim config](https://github.com/ada4a/lazyvim)
 ```
-git clone https://github.com/ugur-a/lazyvim ~/.config/nvim
+git clone https://github.com/ada4a/lazyvim ~/.config/nvim
 ```
 - finish setting up Syncthing - accept this device's requests on the other ones

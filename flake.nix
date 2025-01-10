@@ -1,5 +1,5 @@
 {
-  description = "Flake of ugura";
+  description = "Flake of ada4a";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -61,9 +61,9 @@
 
       userSettings = {
         rmail = "ughur.alakbarov@rwth-aachen.de";
-        pmail = "ugur.alekperov@protonmail.com";
-        name = "Ughur Alakbarov";
-        username = "ugura";
+        pmail = "ada.alakbarova@proton.me";
+        name = "Ada Alakbarova";
+        username = "ada4a";
         layout = "eu";
         shell = pkgs.zsh;
         # I'd use WezTerm, but the patch invalidates the NixOS cache and triggers a manual build.
