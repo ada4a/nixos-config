@@ -7,17 +7,11 @@ let
 in
 {
   accounts.email.accounts = {
-    "gmail" = {
-      address = userSettings.gmail;
-      flavor = "gmail.com";
-      primary = true;
-      realName = userSettings.name;
-      signature.text = signature;
-    };
     "pmail" = {
       address = userSettings.pmail;
       realName = userSettings.name;
       signature.text = signature;
+      primary = true;
     };
     "rmail" = {
       address = userSettings.rmail;

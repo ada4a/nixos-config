@@ -3,7 +3,7 @@
   programs.git = {
     enable = true;
     userName = userSettings.name;
-    userEmail = userSettings.gmail;
+    userEmail = userSettings.pmail;
     aliases = {
       "tree" = "log --oneline --graph --color --all --decorate";
       # https://stackoverflow.com/a/7066424

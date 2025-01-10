@@ -60,7 +60,6 @@
       pkgs = nixpkgs.legacyPackages.${systemSettings.system};
 
       userSettings = {
-        gmail = "ugur.alekperov@gmail.com";
         rmail = "ughur.alakbarov@rwth-aachen.de";
         pmail = "ugur.alekperov@protonmail.com";
         name = "Ughur Alakbarov";

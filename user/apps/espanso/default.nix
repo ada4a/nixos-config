@@ -17,10 +17,6 @@
     matches = {
       emails.matches = [
         {
-          trigger = ";gmail";
-          replace = userSettings.gmail;
-        }
-        {
           trigger = ";pmail";
           replace = userSettings.pmail;
         }
