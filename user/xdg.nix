@@ -4,7 +4,7 @@
   # home.preferXdgDirectories = true;
 
   home.sessionVariables = {
-    PYTHON_HISTORY = config.xdg.stateHome + "python/history";
-    CALCHISTFILE = config.xdg.stateHome + "calc/history";
+    PYTHON_HISTORY = config.xdg.stateHome + "/python/history";
+    CALCHISTFILE = config.xdg.stateHome + "/calc/history";
   };
 }
