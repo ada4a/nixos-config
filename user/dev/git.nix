@@ -14,6 +14,7 @@
       core.editor = "nvim";
       merge.conflictstyle = "diff3";
       merge.tool = "meld";
+      push.autoSetupRemote = true;
       rerere.enabled = true;
     };
     lfs.enable = true;
