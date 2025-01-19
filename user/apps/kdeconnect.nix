@@ -9,7 +9,7 @@ let
 in
 {
   services.kdeconnect = {
-    enable = false; # currently broken
+    enable = true; # currently broken
     # use the Plasma 6 package
     package = pkgs.kdePackages.kdeconnect-kde;
     indicator = true;
@@ -37,7 +37,7 @@ in
 
   # Workaround for Failed to restart syncthingtray.service: Unit tray.target not found.
   # Reference: https://github.com/nix-community/home-manager/issues/2064
-  systemd.user.targets.tray = lib.mkIf cfg.enable {
+  systemd.user.targets.tray = lib.mkIf (cfg.enable || cfg.indicator) {
     Unit = {
       Description = "Home Manager System Tray";
       Requires = [ "graphical-session-pre.target" ];
