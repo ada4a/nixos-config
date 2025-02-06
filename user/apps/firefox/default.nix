@@ -1,11 +1,10 @@
 {
-  inputs,
-  systemSettings,
+  pkgs,
   userSettings,
   ...
 }:
 let
-  firefox-addons = inputs.firefox-addons.packages.${systemSettings.system};
+  firefox-addons = pkgs.inputs.firefox-addons;
 in
 {
   imports = [ ./engines.nix ];
