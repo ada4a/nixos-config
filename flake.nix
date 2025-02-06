@@ -57,7 +57,10 @@
         stateVersion = "23.11";
       };
 
-      pkgs = nixpkgs.legacyPackages.${systemSettings.system};
+      pkgs = import nixpkgs {
+        inherit (systemSettings) system;
+        overlays = builtins.attrValues outputs.overlays;
+      };
 
       userSettings = {
         rmail = "ughur.alakbarov@rwth-aachen.de";
