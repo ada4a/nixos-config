@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ mergiraf ];
+  home.packages = with pkgs; [ inputs.mergiraf.default ];
 
   programs.git = {
 
