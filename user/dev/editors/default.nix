@@ -7,7 +7,6 @@
 {
   imports = [
     ./neovim.nix
-    ./vscode.nix
   ];
 
   home.packages =
