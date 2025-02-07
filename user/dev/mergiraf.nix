@@ -7,7 +7,7 @@
     extraConfig = {
       merge.mergiraf = {
         name = "mergiraf";
-        driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P --compact";
+        driver = "mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P --compact=true";
       };
     };
 
