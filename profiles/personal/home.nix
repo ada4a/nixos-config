@@ -35,9 +35,9 @@
     #floorp
     kdePackages.korganizer
     krename
-    libreoffice
-    ticktick
-    spotify
+    #libreoffice
+    #ticktick
+    #spotify
 
     # CLI
     calc
