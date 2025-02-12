@@ -17,7 +17,7 @@
       rust-analyzer
 
       # Debug Adapters (DAPs)
-      lldb # vscode-lldb
+      #lldb # vscode-lldb
 
       # Formatters
       # vimPlugins.vim-clang-format # conflicts with gruvbox-nvim & lazygit-nvim for some reason?
