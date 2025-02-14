@@ -33,10 +33,6 @@ in
       # disable the reminder for Plasma Integration
       "plasmanotifyrc"."Applications/firefox"."Seen" = true;
       "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
-      # _always_ sleep on closed lid
-      "powerdevilrc"."AC/SuspendAndShutdown"."InhibitLidActionWhenExternalMonitorPresent" = false;
-      "powerdevilrc"."Battery/SuspendAndShutdown"."InhibitLidActionWhenExternalMonitorPresent" = false;
-      "powerdevilrc"."LowBattery/SuspendAndShutdown"."InhibitLidActionWhenExternalMonitorPresent" = false;
     };
 
     workspace = {
