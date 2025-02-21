@@ -11,9 +11,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Extra modules for home-manager
-    xhmm.url = "github:schuelermine/xhmm";
-
     # Third party programs, packaged with nix
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
@@ -43,7 +40,6 @@
       lanzaboote,
       nixos-cosmic,
       plasma-manager,
-      xhmm,
       ...
     }@inputs:
     let
@@ -118,7 +114,6 @@
         modules = [
           ./profiles/personal/home.nix
           plasma-manager.homeManagerModules.plasma-manager
-          xhmm.homeManagerModules.all
         ];
 
         # Optionally use extraSpecialArgs
