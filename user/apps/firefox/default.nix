@@ -20,7 +20,7 @@ in
     settings = {
       "widget.use-xdg-desktop-portal.file-picker" = "1";
     };
-    extensions = with firefox-addons; [
+    extensions.packages = with firefox-addons; [
       bitwarden
       british-english-dictionary-2
       clearurls
