@@ -6,8 +6,6 @@
 {
   home.packages = with pkgs; [
     cargo-flamegraph
-    cargo-generate
-    cargo-modules
     cargo-nextest
     cargo
     clippy
