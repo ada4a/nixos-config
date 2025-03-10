@@ -28,8 +28,8 @@
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
 
-    mergiraf.url = "git+https://codeberg.org/mergiraf/mergiraf";
-    mergiraf.inputs.nixpkgs.follows = "nixpkgs";
+    # mergiraf.url = "git+https://codeberg.org/mergiraf/mergiraf";
+    # mergiraf.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
