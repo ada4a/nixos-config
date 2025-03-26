@@ -9,6 +9,7 @@
     ./nix-direnv.nix
     ./oh-my-posh.nix
     ./rust.nix
+    ./ssh.nix
     ./wezterm.nix
     ./zoxide.nix
     ./zsh.nix
