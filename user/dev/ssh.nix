@@ -16,4 +16,8 @@
     };
   };
 
+  programs.lazygit.settings = {
+    git.overrideGpg = true; # to allow rewording commits
+  };
+
 }
