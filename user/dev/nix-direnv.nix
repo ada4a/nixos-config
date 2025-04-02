@@ -16,6 +16,8 @@ in
     };
   };
 
+  programs.git.ignores = lib.optionals cfg.enable [ ".direnv" ];
+
   # Reference: https://github.com/nix-community/nix-direnv/wiki/Shell-integration
   programs.zsh.initExtra = lib.mkIf cfg.enable ''
     flakify() {
