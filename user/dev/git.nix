@@ -10,8 +10,8 @@
       "alias" = "config --get-regexp ^alias\.";
     };
     extraConfig = {
-      init.defaultBranch = "main";
       core.editor = "nvim";
+      init.defaultBranch = "main";
       merge.conflictstyle = "diff3";
       merge.tool = "meld";
       push.autoSetupRemote = true;
