@@ -12,8 +12,7 @@
     rustc
   ];
 
-  home.sessionVariables = rec {
+  home.sessionVariables = {
     CARGO_HOME = "${config.xdg.cacheHome}/cargo";
-    CARGO_TARGET_DIR = "${CARGO_HOME}/target";
   };
 }
