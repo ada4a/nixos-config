@@ -14,7 +14,6 @@
     # Third party programs, packaged with nix
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
-    firefox-addons.inputs.flake-utils.follows = "flake-utils";
 
     # Secure Boot
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
