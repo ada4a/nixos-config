@@ -38,7 +38,6 @@
       rebase = {
         autoSquash = true;
         autoStash = true;
-        updateRefs = true;
       };
       rerere = {
         enabled = true;
