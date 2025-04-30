@@ -8,6 +8,8 @@
       "tree" = "log --oneline --graph --color --all --decorate";
       # https://stackoverflow.com/a/7066424
       "alias" = "config --get-regexp ^alias\.";
+      # https://git.rwth-aachen.de/help/user/project/merge_requests/merge_request_troubleshooting.md#check-out-locally-by-adding-a-git-alias
+      "mr" = "!sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -";
     };
     extraConfig = {
       branch.sort = "-commiterdate";
