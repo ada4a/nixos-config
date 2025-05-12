@@ -19,7 +19,7 @@ in
   programs.git.ignores = lib.optionals cfg.enable [ ".direnv" ];
 
   # Reference: https://github.com/nix-community/nix-direnv/wiki/Shell-integration
-  programs.zsh.initExtra = lib.mkIf cfg.enable ''
+  programs.zsh.initContent = lib.mkIf cfg.enable ''
     flakify() {
         if [ ! -e flake.nix ]; then
             nix flake new -t github:ada4a/nixos-config#nix-direnv .
