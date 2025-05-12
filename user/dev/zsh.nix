@@ -20,7 +20,7 @@
       ls = "eza";
       top = "htop";
       n = "nvim";
-      up = "nix flake update --commit-lock-file --flake $FLAKE && nh home switch && nh os switch";
+      up = "nix flake update --commit-lock-file --flake $NH_FLAKE && nh home switch && nh os switch";
     };
     shellGlobalAliases = {
       L = "| less";
