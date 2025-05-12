@@ -22,18 +22,18 @@
   home.packages = with pkgs; [
     # Social
     discord
-    signal-desktop
+    # signal-desktop
     telegram-desktop
 
     # Study
-    anki
+    # anki
     obsidian
 
     ausweisapp
-    bitwarden
+    # bitwarden
     kdePackages.filelight
     #floorp
-    kdePackages.korganizer
+    # kdePackages.korganizer
     krename
     #libreoffice
     #ticktick
