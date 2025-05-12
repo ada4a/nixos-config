@@ -7,6 +7,7 @@
     ./nix.nix
     ./nixpkgs.nix
     ./plasma
+    ./telegram.nix
     ./xdg.nix
   ];
 }

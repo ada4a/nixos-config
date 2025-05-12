@@ -23,7 +23,6 @@
     # Social
     discord
     # signal-desktop
-    telegram-desktop
 
     # Study
     # anki
