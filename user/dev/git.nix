@@ -49,4 +49,12 @@
     };
     lfs.enable = true;
   };
+
+  programs.zsh.shellAliases = {
+    gco = "git switch";
+    gra = "git rebase --abort";
+    grc = "git rebase --continue";
+    gma = "git merge --abort";
+    gmc = "git merge --continue";
+  };
 }

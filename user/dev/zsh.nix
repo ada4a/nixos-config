@@ -32,7 +32,6 @@
       plugins =
         # OhMyZsh
         map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") [
-          "git"
           "rust"
           "sudo"
           "systemd"
