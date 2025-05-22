@@ -4,6 +4,7 @@
     ./editors
 
     ./git.nix
+    ./gitui.nix
     ./lazygit.nix
     ./mergiraf.nix
     ./nix-direnv.nix
@@ -17,5 +18,6 @@
 
   home.packages = with pkgs; [
     bacon
+    mprocs
   ];
 }
