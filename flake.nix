@@ -60,7 +60,7 @@
       };
 
       userSettings = {
-        rmail = "ughur.alakbarov@rwth-aachen.de";
+        rmail = "ada.alakbarova@rwth-aachen.de";
         pmail = "ada.alakbarova@proton.me";
         name = "Ada Alakbarova";
         username = "ada4a";
