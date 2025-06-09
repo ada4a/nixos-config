@@ -12,6 +12,7 @@ in
     ./rc2nix.nix
 
     ./input.nix
+    ./konsole.nix
     ./night-light.nix
     ./panels.nix
     ./shortcuts.nix
