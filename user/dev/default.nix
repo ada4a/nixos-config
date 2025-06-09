@@ -7,6 +7,7 @@
     ./gitui.nix
     ./lazygit.nix
     ./mergiraf.nix
+    ./mprocs.nix
     ./nix-direnv.nix
     ./oh-my-posh.nix
     ./rust.nix
@@ -18,6 +19,5 @@
 
   home.packages = with pkgs; [
     bacon
-    mprocs
   ];
 }
