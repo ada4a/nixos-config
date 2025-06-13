@@ -22,7 +22,6 @@ in
   programs.plasma = {
     # there's no way to configure Cosmic on user-level (=home-manager) (yet?)
     enable = (systemSettings.de == "plasma");
-    overrideConfig = true;
 
     configFile = {
       # disable the hot corner (aka. Screen Edge)
