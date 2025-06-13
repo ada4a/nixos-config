@@ -72,7 +72,7 @@
   # Manage environment variables
   home.sessionVariables = {
     BROWSER = "firefox";
-    FLAKE = "$HOME/.dotfiles";
+    NH_FLAKE = "$HOME/.dotfiles";
   };
 
   home.keyboard = {
