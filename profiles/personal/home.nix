@@ -84,6 +84,7 @@
     defaultApplications = {
       "text/*" = [ "nvim.desktop" ];
       "application/pdf" = [ "okular.desktop" ];
+      "video/mp4" = [ "firefox.desktop" ];
     };
   };
 
