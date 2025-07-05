@@ -44,4 +44,55 @@ in
   xdg.configFile = lib.mkIf cfg.enable {
     "PlasmaUserFeedback".text = lib.generators.toINI { } { Global.FeedbackLevel = 64; };
   };
+
+  systemd.user = lib.mkIf cfg.enable {
+    services = {
+      light-theme = {
+        Unit = {
+          Description = "Enable light theme";
+          After = "graphical.target";
+        };
+
+        Service = {
+          ExecStart = "/run/current-system/sw/bin/plasma-apply-colorscheme BreezeLight";
+        };
+      };
+
+      dark-theme = {
+        Unit = {
+          Description = "Enable dark theme";
+          After = "graphical.target";
+        };
+
+        Service = {
+          ExecStart = "/run/current-system/sw/bin/plasma-apply-colorscheme BreezeDark";
+        };
+      };
+
+    };
+
+    timers = {
+      light-theme = {
+        Timer = {
+          OnCalendar = "07:00";
+          Persistent = true;
+        };
+
+        Install = {
+          WantedBy = [ "timers.target" ];
+        };
+      };
+      dark-theme = {
+        Timer = {
+          OnCalendar = "21:00";
+          Persistent = true;
+        };
+
+        Install = {
+          WantedBy = [ "timers.target" ];
+        };
+      };
+
+    };
+  };
 }
