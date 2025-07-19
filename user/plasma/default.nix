@@ -84,7 +84,7 @@ in
       };
       dark-theme = {
         Timer = {
-          OnCalendar = "21:00";
+          OnCalendar = "20:30";
           Persistent = true;
         };
 
