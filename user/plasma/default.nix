@@ -6,6 +6,10 @@
 }:
 let
   cfg = config.programs.plasma;
+
+  setTheme = theme: "/run/current-system/sw/bin/plasma-apply-colorscheme ${theme}";
+  setLightTheme = setTheme "BreezeLight";
+  setDarkTheme = setTheme "BreezeDark";
 in
 {
   imports = [
@@ -45,6 +49,11 @@ in
     "PlasmaUserFeedback".text = lib.generators.toINI { } { Global.FeedbackLevel = 64; };
   };
 
+  programs.zsh.shellAliases = lib.mkIf cfg.enable {
+    lite = setLightTheme;
+    dark = setDarkTheme;
+  };
+
   systemd.user = lib.mkIf cfg.enable {
     services = {
       light-theme = {
@@ -54,7 +63,7 @@ in
         };
 
         Service = {
-          ExecStart = "/run/current-system/sw/bin/plasma-apply-colorscheme BreezeLight";
+          ExecStart = setLightTheme;
         };
       };
 
@@ -65,7 +74,7 @@ in
         };
 
         Service = {
-          ExecStart = "/run/current-system/sw/bin/plasma-apply-colorscheme BreezeDark";
+          ExecStart = setDarkTheme;
         };
       };
 
