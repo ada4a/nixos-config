@@ -1,4 +1,8 @@
 { config, ... }:
+
+let
+  cfg = config.programs.zsh;
+in
 {
   programs.zsh = {
     enable = true;
@@ -39,6 +43,12 @@
     };
 
     initContent = ''
+      # load completions
+      fpath=(
+          ${config.xdg.configHome}/zsh/completions
+          $fpath
+      )
+
       # Completion styling
       # Stolen from: https://github.com/dreamsofautonomy/zensh/blob/0ef5b9384f22923c73ae521d5d74bebb7b5791f5/.zshrc#L70-L75
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

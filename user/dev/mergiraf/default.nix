@@ -13,4 +13,9 @@
 
     attributes = [ "* merge=mergiraf" ];
   };
+
+  xdg.configFile."zsh/completions/_mergiraf" = {
+    enable = true; # TODO: only enable if the `mergiraf` "module" is enabled
+    source = ./completions.zsh;
+  };
 }

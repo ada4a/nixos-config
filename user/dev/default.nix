@@ -6,7 +6,7 @@
     ./git.nix
     ./gitui.nix
     ./lazygit.nix
-    ./mergiraf.nix
+    ./mergiraf
     ./mprocs.nix
     ./nix-direnv.nix
     ./oh-my-posh.nix
