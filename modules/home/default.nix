@@ -1,3 +1,3 @@
 {
-  mergiraf = (import ./mergiraf.nix);
+  programs.mergiraf = (import ./mergiraf.nix);
 }
