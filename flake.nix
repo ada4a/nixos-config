@@ -2,7 +2,11 @@
   description = "Flake of ada4a";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # to temporarily overwrite the ref:
+    # nixpkgs.url = "github:nixos/nixpkgs/?branch=nixos-unstable&ref=<SHA goes here>";
+
+    # fix rust-analyzer: https://github.com/NixOS/nixpkgs/issues/432960
+    nixpkgs.url = "github:nixos/nixpkgs/?branch=nixos-unstable&ref=08b92281cc32cfba994c199f466d0fa958ccac6f";
     nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree/nixos-unstable";
     nixpkgs-unfree.inputs.nixpkgs.follows = "nixpkgs";
     # only add this so that all the other inputs follow it
