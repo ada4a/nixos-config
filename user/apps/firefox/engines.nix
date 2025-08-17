@@ -31,14 +31,14 @@ in
 
     "Rust Standard Library" = {
       urls = [ { template = "https://doc.rust-lang.org/std/?search={searchTerms}"; } ];
-      icon = "https://docs.rs/-/static/favicon.ico";
+      icon = "https://doc.rust-lang.org/std/static.files/favicon-32x32-6580c154.png";
       inherit updateInterval;
       definedAliases = [ "@rstd" ];
     };
 
     "Nightly Rust" = {
       urls = [ { template = "https://doc.rust-lang.org/nightly/nightly-rustc/?search={searchTerms}"; } ];
-      icon = "https://docs.rs/-/static/favicon.ico";
+      icon = "https://doc.rust-lang.org/nightly/nightly-rustc/static.files/favicon-32x32-6580c154.png";
       inherit updateInterval;
       definedAliases = [
         "@nrs"
