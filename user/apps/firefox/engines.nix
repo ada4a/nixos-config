@@ -36,6 +36,16 @@ in
       definedAliases = [ "@rstd" ];
     };
 
+    "Nightly Rust" = {
+      urls = [ { template = "https://doc.rust-lang.org/nightly/nightly-rustc/?search={searchTerms}"; } ];
+      icon = "https://docs.rs/-/static/favicon.ico";
+      inherit updateInterval;
+      definedAliases = [
+        "@nrs"
+        "@rsn"
+      ];
+    };
+
     # https://github.com/opensearch.xml
     "Github" = {
       urls = [ { template = "https://github.com/search?q={searchTerms}&ref=opensearch"; } ];
