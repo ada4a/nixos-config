@@ -32,14 +32,7 @@ in
 
     antidote = {
       enable = true;
-      plugins =
-        # OhMyZsh
-        map (x: "ohmyzsh/ohmyzsh path:plugins/${x}") [
-          "rust"
-          "sudo"
-          "systemd"
-        ]
-        ++ [ "Aloxaf/fzf-tab" ];
+      plugins = [ "Aloxaf/fzf-tab" ];
     };
 
     initContent = ''
