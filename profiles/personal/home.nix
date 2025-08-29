@@ -35,6 +35,7 @@
     # kdePackages.korganizer
     krename
     #libreoffice
+    localsend
     #ticktick
     #spotify
 
