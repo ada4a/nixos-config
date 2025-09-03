@@ -5,6 +5,8 @@
 }:
 {
   home.packages = with pkgs; [
+    llvm # rustc requires a C compiler
+
     cargo-flamegraph
     cargo-info
     cargo-nextest
