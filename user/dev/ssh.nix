@@ -1,4 +1,7 @@
-{ config, ... }:
+{ lib, config, ... }:
+let
+  cfg = config.programs.ssh;
+in
 {
   programs.ssh = {
     enable = true;
@@ -20,7 +23,7 @@
   };
 
   # https://jeppesen.io/git-commit-sign-nix-home-manager-ssh/
-  programs.git = {
+  programs.git = lib.mkIf cfg.enable {
     signing = {
       signByDefault = true;
       format = "ssh";
@@ -31,7 +34,7 @@
     };
   };
 
-  programs.lazygit.settings = {
+  programs.lazygit.settings = lib.mkIf cfg.enable {
     git.overrideGpg = true; # to allow rewording commits
   };
 
