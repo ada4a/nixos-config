@@ -1,4 +1,12 @@
-{ userSettings, ... }:
+{
+  lib,
+  config,
+  userSettings,
+  ...
+}:
+let
+  cfg = config.programs.git;
+in
 {
   programs.git = {
     enable = true;
@@ -50,7 +58,7 @@
     lfs.enable = true;
   };
 
-  programs.zsh.shellAliases = {
+  programs.zsh.shellAliases = lib.mkIf cfg.enable {
     gco = "git switch";
     gra = "git rebase --abort";
     grc = "git rebase --continue";
