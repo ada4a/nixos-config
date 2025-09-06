@@ -38,7 +38,7 @@ in
       help.autocorrect = "prompt";
       init.defaultBranch = "main";
       merge.conflictstyle = "diff3";
-      merge.tool = "meld";
+      merge.tool = "kdiff3";
       pull.rebase = true;
       push = {
         default = "simple";

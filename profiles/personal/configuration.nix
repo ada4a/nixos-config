@@ -105,7 +105,7 @@
     git
     htop
     hyfetch
-    meld
+    kdiff3
     neovim
     ripgrep
     tlrc
