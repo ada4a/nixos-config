@@ -65,4 +65,6 @@ in
     gma = "git merge --abort";
     gmc = "git merge --continue";
   };
+
+  programs.git.difftastic.enable = true;
 }
