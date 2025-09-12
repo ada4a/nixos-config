@@ -34,7 +34,7 @@
     #floorp
     # kdePackages.korganizer
     krename
-    #libreoffice
+    libreoffice
     localsend
     #ticktick
     #spotify
