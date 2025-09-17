@@ -112,7 +112,7 @@
         # the path to your home.nix.
         modules = [
           ./profiles/personal/home.nix
-          plasma-manager.homeManagerModules.plasma-manager
+          plasma-manager.homeModules.plasma-manager
         ];
 
         # Optionally use extraSpecialArgs
