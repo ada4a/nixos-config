@@ -22,6 +22,9 @@
   };
 
   programs.zsh.shellAliases = lib.mkIf config.programs.neovim.enable {
+    "c" = "cargo";
+    "cuit" = "cargo uitest";
+    "cuib" = "cargo uibless";
     "nvimr" = "NVIM_APPNAME=nvim-rustc nvim";
     "nr" = "NVIM_APPNAME=nvim-rustc nvim";
   };
