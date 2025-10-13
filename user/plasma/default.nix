@@ -21,6 +21,8 @@ in
     ./panels.nix
     ./shortcuts.nix
     ./window-rules.nix
+
+    ./kdeconnect.nix
   ];
 
   programs.plasma = {
