@@ -1,3 +1,4 @@
+{ lib, systemSettings, ... }:
 {
   imports = [
     ./apps
@@ -6,8 +7,8 @@
     ./fonts.nix
     ./nix.nix
     ./nixpkgs.nix
-    ./plasma
     ./telegram.nix
     ./xdg.nix
-  ];
+  ]
+  ++ lib.optionals (systemSettings.de == "plasma") [ ./plasma ];
 }

@@ -20,9 +20,6 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.flake-utils.follows = "flake-utils";
 
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
-    nixos-cosmic.inputs.nixpkgs.follows = "nixpkgs";
-
     plasma-manager.url = "github:nix-community/plasma-manager";
     plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
     plasma-manager.inputs.home-manager.follows = "home-manager";
@@ -37,7 +34,6 @@
       nixpkgs,
       home-manager,
       lanzaboote,
-      nixos-cosmic,
       plasma-manager,
       ...
     }@inputs:
@@ -50,7 +46,7 @@
         hostname = "magicbook";
         timezone = "Europe/Berlin";
         locale = "en_IE.UTF-8";
-        de = "plasma";
+        de = "cosmic";
         stateVersion = "23.11";
       };
 
@@ -91,7 +87,6 @@
 
         modules = [
           ./profiles/personal/configuration.nix
-          nixos-cosmic.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
         ];
 
