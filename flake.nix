@@ -33,6 +33,7 @@
       self,
       nixpkgs,
       home-manager,
+      flake-utils,
       lanzaboote,
       plasma-manager,
       ...
@@ -69,7 +70,24 @@
         fonts.mono = "Cascadia Code";
       };
     in
-    {
+    # All of the custom stuff I export (and use myself)
+    ## System-specific outputs
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      {
+        # My custom packages, available through 'nix build', 'nix shell', etc
+        legacyPackages = import ./pkgs/legacy { inherit pkgs; };
+
+        # My custom modules
+        nixosModules = import ./modules/nixos;
+        homeManagerModules = import ./modules/home;
+      }
+    )
+    ## System-independent ouputs
+    // {
       overlays = import ./overlays { inherit inputs; };
 
       templates = import ./templates;
