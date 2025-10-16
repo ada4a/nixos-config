@@ -1,4 +1,7 @@
 {
+
+  imports = [ ./cosmic-ext-applet-external-monitor-brightness.nix ];
+
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 

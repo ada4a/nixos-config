@@ -4,7 +4,7 @@ let
     let
       inherit (systemSettings) de;
       match_de = {
-        "cosmic" = ./cosmic.nix;
+        "cosmic" = ./cosmic;
         "plasma" = ./plasma.nix;
       };
     in

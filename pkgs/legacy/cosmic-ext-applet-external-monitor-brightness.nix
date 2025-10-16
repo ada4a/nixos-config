@@ -6,6 +6,7 @@
   libcosmicAppHook,
   just,
   pkg-config,
+  ddcutil,
   udev,
   nix-update-script,
 }:
@@ -28,7 +29,10 @@ rustPlatform.buildRustPackage {
     pkg-config
   ];
 
-  buildInputs = [ udev ];
+  buildInputs = [
+    ddcutil
+    udev
+  ];
 
   dontUseJustBuild = true;
   dontUseJustCheck = true;
