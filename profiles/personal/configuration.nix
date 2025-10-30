@@ -98,7 +98,7 @@
     bat
     btop
     eza
-    du-dust
+    dust
     fastmod
     fd
     fzf
