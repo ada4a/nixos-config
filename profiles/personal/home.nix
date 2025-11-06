@@ -31,6 +31,7 @@
     ausweisapp
     # bitwarden
     kdePackages.filelight
+    kdePackages.okular
     #floorp
     # kdePackages.korganizer
     krename
