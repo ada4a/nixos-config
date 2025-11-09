@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 {
   nix = {
-    package = pkgs.nixVersions.stable;
+    package = pkgs.lixPackageSets.stable.lix;
     # Opinionated: disable channels^[1]
     channel.enable = false;
     # allows accessing unfree packages in `nix run` and friends
