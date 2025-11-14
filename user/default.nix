@@ -11,5 +11,5 @@
     ./xdg.nix
   ]
   ++ lib.optionals (systemSettings.de == "plasma") [ ./plasma ]
-  ++ lib.optionals (systemSettings.de == "cosmic") [ ./cosmic.nix ];
+  ++ lib.optionals (systemSettings.de == "cosmic") [ ./cosmic ];
 }
