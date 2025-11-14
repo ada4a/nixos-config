@@ -1,6 +1,8 @@
 {
   pkgs,
+  lib,
   userSettings,
+  systemSettings,
   ...
 }:
 let
@@ -20,19 +22,20 @@ in
     settings = {
       "widget.use-xdg-desktop-portal.file-picker" = "1";
     };
-    extensions.packages = with firefox-addons; [
-      bitwarden
-      british-english-dictionary-2
-      clearurls
-      darkreader
-      dictionary-german
-      duckduckgo-privacy-essentials
-      indie-wiki-buddy
-      plasma-integration
-      return-youtube-dislikes
-      simple-tab-groups
-      ublock-origin
-      whowrotethat
-    ];
+    extensions.packages =
+      (with firefox-addons; [
+        bitwarden
+        british-english-dictionary-2
+        clearurls
+        darkreader
+        dictionary-german
+        duckduckgo-privacy-essentials
+        indie-wiki-buddy
+        return-youtube-dislikes
+        simple-tab-groups
+        ublock-origin
+        whowrotethat
+      ])
+      ++ lib.optionals (systemSettings.de == "plasma") firefox-addons.plasma-integration;
   };
 }
