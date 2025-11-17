@@ -64,5 +64,8 @@ in
     gmc = "git merge --continue";
   };
 
-  programs.difftastic.git.enable = true;
+  programs.difftastic = {
+    enable = true;
+    git.enable = true;
+  };
 }
