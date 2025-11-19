@@ -51,7 +51,7 @@
   # Configure keymap in X11
   services.xserver.xkb.layout = "eu,ru";
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing.enable = false;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;
