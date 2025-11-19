@@ -6,5 +6,4 @@ in
   cosmic-ext-applet-external-monitor-brightness =
     callPackage ./cosmic-ext-applet-external-monitor-brightness.nix
       { };
-  memreserver = callPackage ./memreserver.nix { };
 }
