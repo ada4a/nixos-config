@@ -11,9 +11,7 @@
     cargo-flamegraph
     cargo-info
     cargo-nextest
-    cargo
-    clippy
-    rustc
+    rustup
     rusty-man
   ];
 
