@@ -20,10 +20,6 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.inputs.flake-utils.follows = "flake-utils";
 
-    plasma-manager.url = "github:nix-community/plasma-manager";
-    plasma-manager.inputs.nixpkgs.follows = "nixpkgs";
-    plasma-manager.inputs.home-manager.follows = "home-manager";
-
     # mergiraf.url = "git+https://codeberg.org/mergiraf/mergiraf";
     # mergiraf.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -35,7 +31,6 @@
       home-manager,
       flake-utils,
       lanzaboote,
-      plasma-manager,
       ...
     }@inputs:
     let
@@ -125,7 +120,6 @@
         # the path to your home.nix.
         modules = [
           ./profiles/personal/home.nix
-          plasma-manager.homeModules.plasma-manager
         ];
 
         # Optionally use extraSpecialArgs
