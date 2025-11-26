@@ -2,7 +2,9 @@
   description = "Flake of ada4a";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # Pin the revision temporarily because of https://github.com/NixOS/nixpkgs/issues/464392
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/117cc7f94e8072499b0a7aa4c52084fa4e11cc9b";
     nixpkgs-unfree.url = "github:numtide/nixpkgs-unfree/nixos-unstable";
     nixpkgs-unfree.inputs.nixpkgs.follows = "nixpkgs";
     # only add this so that all the other inputs follow it
