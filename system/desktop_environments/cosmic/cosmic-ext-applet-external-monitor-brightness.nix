@@ -1,13 +1,10 @@
 {
-  systemSettings,
   userSettings,
-  outputs,
+  pkgs,
   ...
 }:
 {
-  environment.systemPackages = with outputs.legacyPackages."${systemSettings.system}"; [
-    cosmic-ext-applet-external-monitor-brightness
-  ];
+  environment.systemPackages = [ pkgs.cosmic-ext-applet-external-monitor-brightness ];
 
   hardware.i2c.enable = true;
   boot.kernelModules = [ "i2c-dev" ];
