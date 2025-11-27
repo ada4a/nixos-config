@@ -8,6 +8,7 @@
     ./nix.nix
     ./nixpkgs.nix
     ./telegram.nix
+    ./tldr.nix
     ./xdg.nix
   ]
   ++ lib.optionals (systemSettings.de == "plasma") [ ./plasma ]
