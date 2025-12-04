@@ -1,9 +1,10 @@
 {
-  # pkgs,
+  pkgs,
   ...
 }:
-# let
-#   inherit (pkgs) callPackage;
-# in
+let
+  inherit (pkgs) callPackage;
+in
 {
+  memreserver = callPackage ./memreserver.nix { };
 }
