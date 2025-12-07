@@ -1,14 +1,6 @@
-{ userSettings, ... }:
-let
-  inherit (userSettings) username;
-in
 {
   services.syncthing = {
     enable = true;
-    openDefaultPorts = true;
-    user = username;
-    dataDir = "/home/${username}/Documents";
-    configDir = "/home/${username}/.config/syncthing";
     overrideDevices = true;
     overrideFolders = true;
     settings = {
