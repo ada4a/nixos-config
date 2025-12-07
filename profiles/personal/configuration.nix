@@ -117,7 +117,6 @@
 
     home-manager
     nh
-    syncthing
     wl-clipboard
 
     firefox
