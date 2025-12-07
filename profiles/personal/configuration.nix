@@ -80,7 +80,10 @@
     hashedPassword = "$y$j9T$8ujHxGIKBXZLj.L/UGKWc0$PFKbDL1Bl2kr9Ovx.NVNw7FkIOHLZgF7OQ0eIwEBx66";
   };
   # don't forget to actually enable the user shell!
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableGlobalCompInit = false;
+  };
 
   # Enable automatic login for the user.
   services.displayManager.autoLogin = {
