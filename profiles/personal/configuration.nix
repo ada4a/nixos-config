@@ -102,7 +102,8 @@
     btop
     eza
     dust
-    fastmod
+    fastmod # interactive directory-wide search-and-replace
+    file
     fd
     fzf
     git
