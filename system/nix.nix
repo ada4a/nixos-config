@@ -25,6 +25,12 @@
     # Opinionated: disable global registry^[1]
     flake-registry = "";
     use-xdg-base-directories = true;
+    extra-substituters = [
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs"
+    ];
   };
 }
 # [1]: https://github.com/Misterio77/nix-starter-configs/blob/main/standard/nixos/configuration.nix#L52
