@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     clang # rustc requires a C compiler
 
+    cargo-expand
     cargo-flamegraph
     cargo-info
     cargo-nextest
