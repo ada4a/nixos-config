@@ -13,7 +13,6 @@
     cargo-info
     cargo-nextest
     rustup
-    rusty-man
   ];
 
   home.sessionVariables = {
