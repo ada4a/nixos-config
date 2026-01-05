@@ -11,6 +11,7 @@ in
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    dotDir = "${config.xdg.configHome}/zsh"; # TODO: remove once `stateVersion>=26.05`
     history = {
       path = "${config.xdg.stateHome}/zsh/history";
       ignoreAllDups = true;
