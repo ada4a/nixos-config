@@ -11,6 +11,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     # Third party programs, packaged with nix
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
@@ -29,6 +31,7 @@
       self,
       nixpkgs,
       home-manager,
+      nix-flatpak,
       flake-utils,
       lanzaboote,
       ...
@@ -120,6 +123,7 @@
         # the path to your home.nix.
         modules = [
           ./profiles/personal/home.nix
+          nix-flatpak.homeManagerModules.nix-flatpak
         ];
 
         # Optionally use extraSpecialArgs

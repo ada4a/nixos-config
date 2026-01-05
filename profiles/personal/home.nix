@@ -21,12 +21,9 @@
   # Install Nix packages into the environment
   home.packages = with pkgs; [
     # Social
-    discord
-    # signal-desktop
 
     # Study
     # anki
-    obsidian
 
     ausweisapp
     # bitwarden
@@ -38,7 +35,6 @@
     libreoffice
     localsend
     #ticktick
-    #spotify
 
     # CLI
     calc
