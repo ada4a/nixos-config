@@ -1,4 +1,3 @@
-{ outputs, systemSettings, ... }:
 {
   imports = [ ./cosmic-ext-applet-external-monitor-brightness.nix ];
 
@@ -9,6 +8,6 @@
   environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
 
   environment.systemPackages = [
-    outputs.legacyPackages."${systemSettings.system}".clipboard-manager
+    # outputs.legacyPackages."${systemSettings.system}".clipboard-manager
   ];
 }
