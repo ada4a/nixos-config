@@ -1,0 +1,29 @@
+commit f6d9564fc090133eadd906ba22536d42c3338faf
+Author: Ada Alakbarova <ada.alakbarova@proton.me>
+Date:   Fri Jan 9 12:39:47 2026 +0100
+
+    feat: include swap in RAM usage
+
+diff --git a/src/applet.rs b/src/applet.rs
+index 50dc3c8..cfdd4dc 100644
+--- a/src/applet.rs
++++ b/src/applet.rs
+@@ -68,7 +68,8 @@ impl SysInfo {
+         );
+ 
+         self.cpu_usage = self.system.global_cpu_usage();
+-        self.ram_usage = (self.system.used_memory() * 100) / self.system.total_memory();
++        self.ram_usage = ((self.system.used_swap() + self.system.used_memory()) * 100)
++            / (self.system.total_swap() + self.system.total_memory());
+ 
+         self.networks.refresh(true);
+ 
+@@ -107,7 +108,7 @@ impl cosmic::Application for SysInfo {
+ 
+         let system = System::new_with_specifics(
+             RefreshKind::nothing()
+-                .with_memory(MemoryRefreshKind::nothing().with_ram())
++                .with_memory(MemoryRefreshKind::everything())
+                 .with_cpu(CpuRefreshKind::nothing().with_cpu_usage()),
+         );
+         let networks = Networks::new_with_refreshed_list();

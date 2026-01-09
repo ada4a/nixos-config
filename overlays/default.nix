@@ -30,5 +30,10 @@ in
     # patch itself (and, originally, the overlay to apply it) graciously provided by @SuperSandro2000 (thanks again!)
     # patch presented in https://github.com/wez/wezterm/issues/3142#issuecomment-1821787347
     wezterm = addPatches prev.wezterm.overrideAttrs [ ./wezterm-scroll-sensitivity.diff ];
+
+    # Implements https://github.com/cosmic-utils/cosmic-ext-applet-sysinfo/issues/9
+    cosmic-ext-applet-sysinfo = addPatches prev.cosmic-ext-applet-sysinfo [
+      ./cosmic-ext-applet-sysinfo-include-swap.diff
+    ];
   };
 }
