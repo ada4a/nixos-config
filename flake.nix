@@ -93,7 +93,7 @@
     # My actual config
     // {
       # Formatter for my nix files, available through 'nix fmt'
-      formatter.${systemSettings.system} = pkgs.nixfmt-rfc-style;
+      formatter.${systemSettings.system} = pkgs.nixfmt;
 
       # devShell for bootstrapping a configuration
       devShells.${systemSettings.system} = import ./shell.nix { inherit pkgs; };
