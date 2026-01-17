@@ -22,5 +22,10 @@
         L = global "| less";
         G = global "| rg";
       };
+
+    interactiveShellInit = ''
+      # change greeting message
+      set fish_greeting "They let you write anything in here!"
+    '';
   };
 }
