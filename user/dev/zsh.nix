@@ -1,11 +1,11 @@
 { config, ... }:
 
 let
-  cfg = config.programs.zsh;
+  # cfg = config.programs.zsh;
 in
 {
   programs.zsh = {
-    enable = true;
+    enable = false;
 
     autocd = true;
     autosuggestion.enable = true;

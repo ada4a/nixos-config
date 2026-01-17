@@ -3,6 +3,7 @@
   imports = [
     ./editors
 
+    ./fish.nix
     ./git.nix
     ./gitui.nix
     ./lazygit.nix

@@ -19,15 +19,15 @@
     CARGO_HOME = "${config.xdg.cacheHome}/cargo";
   };
 
-  programs.zsh.shellAliases = lib.mkMerge [
+  programs.fish.shellAbbrs = lib.mkMerge [
     {
-      "c" = "cargo";
-      "cuit" = "cargo uitest";
-      "cuib" = "cargo uibless";
+      c = "cargo";
+      cuit = "cargo uitest";
+      cuib = "cargo uibless";
     }
     (lib.mkIf config.programs.neovim.enable {
-      "nvimr" = "NVIM_APPNAME=nvim-rustc nvim";
-      "nr" = "NVIM_APPNAME=nvim-rustc nvim";
+      nvimr = "NVIM_APPNAME=nvim-rustc nvim";
+      nr = "NVIM_APPNAME=nvim-rustc nvim";
     })
   ];
 }

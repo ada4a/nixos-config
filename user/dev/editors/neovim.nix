@@ -25,10 +25,6 @@ in
     '';
   };
 
-  programs.zsh.shellAliases = lib.mkIf cfg.enable {
-    "NVIM_APPNAME" = "lazyvim";
-  };
-
   home.packages = lib.optionals cfg.enable [
     pkgs.tree-sitter # required for nvim-lspconfig, https://github.com/LazyVim/LazyVim/commit/5eac460c092103e5516bec345236853b9f35ec7c
   ];

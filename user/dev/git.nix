@@ -56,7 +56,7 @@ in
   };
   programs.git.lfs.enable = true;
 
-  programs.zsh.shellAliases = lib.mkIf cfg.enable {
+  programs.fish.shellAliases = lib.mkIf cfg.enable {
     gco = "git switch";
     gra = "git rebase --abort";
     grc = "git rebase --continue";

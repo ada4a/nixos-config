@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 
 is_dark=~/.config/cosmic/com.system76.CosmicTheme.Mode/v1/is_dark
 if ( $("cat" $is_dark) ); then

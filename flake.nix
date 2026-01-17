@@ -60,7 +60,7 @@
         name = "Ada Alakbarova";
         username = "ada4a";
         layout = "eu";
-        shell = pkgs.zsh;
+        shell = pkgs.fish;
         # I'd use WezTerm, but the patch invalidates the NixOS cache and triggers a manual build.
         # The latter takes AGES on this machine (and also fails right at the end it seems?)
         # So stay on Konsole for now

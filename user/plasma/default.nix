@@ -51,7 +51,7 @@ in
     "PlasmaUserFeedback".text = lib.generators.toINI { } { Global.FeedbackLevel = 64; };
   };
 
-  programs.zsh.shellAliases = lib.mkIf cfg.enable {
+  programs.fish.shellAbbrs = lib.mkIf cfg.enable {
     lite = setLightTheme;
     dark = setDarkTheme;
   };

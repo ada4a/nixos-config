@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [ mergiraf ];
 
@@ -15,7 +15,7 @@
   };
 
   xdg.configFile."zsh/completions/_mergiraf" = {
-    enable = true; # TODO: only enable if the `mergiraf` "module" is enabled
+    enable = config.programs.zsh.enable; # TODO: only enable if the `mergiraf` "module" is enabled
     source = ./completions.zsh;
   };
 }
