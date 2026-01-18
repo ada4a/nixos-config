@@ -5,6 +5,7 @@
 
     ./fish.nix
     ./git.nix
+    ./jujutsu.nix
     ./lazygit.nix
     ./mergiraf
     ./mprocs.nix
@@ -20,4 +21,5 @@
   home.packages = with pkgs; [
     bacon
   ];
+
 }
