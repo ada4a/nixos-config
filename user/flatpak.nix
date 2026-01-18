@@ -1,4 +1,6 @@
+{ pkgs, ... }:
 {
+  home.packages = [ pkgs.flatpak ];
   xdg.portal.config.common.default = "cosmic";
   services.flatpak = {
     enable = true;
