@@ -99,8 +99,6 @@
       devShells.${systemSettings.system} = import ./shell.nix { inherit pkgs; };
 
       nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
-        inherit (systemSettings) system;
-
         modules = [
           ./profiles/personal/configuration.nix
           lanzaboote.nixosModules.lanzaboote
