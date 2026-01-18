@@ -5,7 +5,6 @@
 
     ./fish.nix
     ./git.nix
-    ./gitui.nix
     ./lazygit.nix
     ./mergiraf
     ./mprocs.nix
