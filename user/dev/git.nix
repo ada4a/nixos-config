@@ -11,7 +11,7 @@ in
   programs.git.enable = true;
   programs.git.settings = {
     user.name = userSettings.name;
-    user.email = userSettings.pmail;
+    user.email = userSettings.email;
     aliases = {
       "tree" = "log --oneline --graph --color --all --decorate";
       # https://stackoverflow.com/a/7066424

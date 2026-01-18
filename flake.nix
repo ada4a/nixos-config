@@ -54,9 +54,10 @@
         overlays = builtins.attrValues outputs.overlays;
       };
 
-      userSettings = {
+      userSettings = rec {
         rmail = "ada.alakbarova@rwth-aachen.de";
         pmail = "ada.alakbarova@proton.me";
+        email = pmail;
         name = "Ada Alakbarova";
         username = "ada4a";
         layout = "eu";
