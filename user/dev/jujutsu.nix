@@ -11,5 +11,10 @@
         "init"
       ];
     };
+    signing = {
+      behavior = "own";
+      backend = "ssh";
+      key = "~/.ssh/id_ed25519.pub";
+    };
   };
 }
