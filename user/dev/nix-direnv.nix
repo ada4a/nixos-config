@@ -7,16 +7,12 @@ in
     enable = true;
     nix-direnv.enable = true;
     config = {
-      global = lib.mkMerge [
-        {
-          hide_env_diff = true;
-        }
-        (lib.mkIf config.programs.zsh.enable {
-          # stop the "`direnv export zsh` is taking a while" warning
-          # https://github.com/direnv/direnv/blob/978008aa7c66e5beb3e3c4a7705c3d0ce4f99f1c/man/direnv.toml.1.md?plain=1#L56
-          warn_timeout = "0s";
-        })
-      ];
+      global = {
+        hide_env_diff = true;
+        # stop the "`direnv export $SHELL` is taking a while" warning
+        # https://github.com/direnv/direnv/blob/978008aa7c66e5beb3e3c4a7705c3d0ce4f99f1c/man/direnv.toml.1.md?plain=1#L56
+        warn_timeout = "0s";
+      };
     };
   };
 
