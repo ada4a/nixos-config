@@ -16,6 +16,9 @@
       backend = "ssh";
       key = "~/.ssh/id_ed25519.pub";
     };
-    ui.diff-editor = ":builtin";
+    ui = {
+      default-command = "status";
+      diff-editor = ":builtin";
+    };
   };
 }
