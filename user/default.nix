@@ -8,8 +8,6 @@
     ./fonts.nix
     ./nix.nix
     ./nixpkgs.nix
-    ./syncthing.nix
-    ./telegram.nix
     ./tldr.nix
     ./xdg.nix
   ]
