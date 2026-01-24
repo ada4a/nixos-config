@@ -10,6 +10,10 @@
         "git"
         "init"
       ];
+      push = [
+        "git"
+        "push"
+      ];
     };
     signing = {
       behavior = "own";
