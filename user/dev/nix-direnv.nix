@@ -27,7 +27,7 @@ in
           echo "use flake" > .envrc
           direnv allow
       end
-      ''${EDITOR:-vim} flake.nix
+      $EDITOR flake.nix
     '';
   };
 }
