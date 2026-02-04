@@ -23,11 +23,12 @@
     # Social
 
     # Study
-    # anki
+    anki
 
     ausweisapp
     # bitwarden
     kdePackages.filelight
+    kdePackages.gwenview # at least under Cosmic gets its own image viewer
     kdePackages.okular
     kooha # screen recorder
     #floorp
