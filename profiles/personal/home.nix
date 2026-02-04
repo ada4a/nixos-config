@@ -29,6 +29,7 @@
     # bitwarden
     kdePackages.filelight
     kdePackages.okular
+    kooha # screen recorder
     #floorp
     # kdePackages.korganizer
     krename
