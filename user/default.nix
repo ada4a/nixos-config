@@ -4,6 +4,7 @@
     ./apps
     ./dev
     ./email.nix
+    ./ferrous.nix
     ./flatpak.nix
     ./fonts.nix
     ./nix.nix
