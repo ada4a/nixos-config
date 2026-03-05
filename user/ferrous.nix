@@ -19,9 +19,6 @@ in
       contents = {
         user.email = fmail;
         user.signingKey = fkeypub;
-        # the thing I use this for is cloning git repos -- otherwise Git tries to use my personal
-        # key and fails
-        core.sshCommand = "ssh -i ${fkey}";
       };
     }
   ];
@@ -40,21 +37,28 @@ in
         "--when".repositories = [ fdir ];
         user.email = fmail;
         signing.key = fkeypub;
-        # it looks like there isn't an option corresponding to `core.sshCommand`...
-        # no `jj git clone` for me I guess
       }
     ];
   };
 
-  # use 1password as the ssh agent
-  programs.ssh =
-    let
-      onePassPath = "~/.1password/agent.sock";
-    in
-    {
-      enable = true;
-      matchBlocks."*" = {
+  programs.ssh = {
+    enable = true;
+    # use 1password as the ssh agent
+    # FIXME: apparently still doesn't work for jujutsu
+    matchBlocks."*" =
+      let
+        onePassPath = "~/.1password/agent.sock";
+      in
+      {
         identityAgent = onePassPath;
       };
+
+    # use ferrous key for ferrous repos
+    #
+    # usage example: `git clone git@fe:ferrous-systems/people`
+    matchBlocks."fe" = {
+      hostname = "github.com";
+      identityFile = fkey;
     };
+  };
 }
