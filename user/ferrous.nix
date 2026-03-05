@@ -37,6 +37,11 @@ in
         "--when".repositories = [ fdir ];
         user.email = fmail;
         signing.key = fkeypub;
+        # spawn git as a subprocess so that it's the one handling SSH -- otherwise
+        # jj doesn't seem to pick up things like the configured ssh agent
+        #
+        # seehttps://github.com/jj-vcs/jj/pull/5228
+        git.subprocess = true;
       }
     ];
   };
@@ -44,7 +49,6 @@ in
   programs.ssh = {
     enable = true;
     # use 1password as the ssh agent
-    # FIXME: apparently still doesn't work for jujutsu
     matchBlocks."*" =
       let
         onePassPath = "~/.1password/agent.sock";
