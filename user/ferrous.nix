@@ -48,21 +48,19 @@ in
 
   programs.ssh = {
     enable = true;
-    # use 1password as the ssh agent
-    matchBlocks."*" =
+    # in ferrous repos:
+    # - use the ferrous key
+    # - use 1password as the ssh agent
+    #
+    # usage example: `git clone git@fe:ferrous-systems/people`
+    matchBlocks."fe" =
       let
         onePassPath = "~/.1password/agent.sock";
       in
       {
+        hostname = "github.com";
+        identityFile = fkey;
         identityAgent = onePassPath;
       };
-
-    # use ferrous key for ferrous repos
-    #
-    # usage example: `git clone git@fe:ferrous-systems/people`
-    matchBlocks."fe" = {
-      hostname = "github.com";
-      identityFile = fkey;
-    };
   };
 }
