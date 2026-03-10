@@ -24,7 +24,7 @@
     "firefox-addons": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs-unfree"
         ]
       },
       "locked": {
