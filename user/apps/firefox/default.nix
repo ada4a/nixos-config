@@ -20,6 +20,18 @@ in
       privateDefault = "ddg";
     };
     settings = {
+      # kill it with fire
+      browser.ml.enable = false;
+      browser.ml.chat = {
+        enabled = false;
+        menu = false;
+        page.footerBadge = false;
+        page.menuBade = false;
+      };
+      browser.search.visualSearch.featureGate = false;
+      browser.tabs.groups.smart.enabled = false;
+      extensions.ml.enabled = false;
+
       "widget.use-xdg-desktop-portal.file-picker" = "1";
     };
     extensions.packages =
