@@ -24,9 +24,5 @@
       default-command = "status";
       diff-editor = ":builtin";
     };
-    revsets = {
-      # same as default, but un-elides all the refs from main to @
-      log = "trunk()::present(@) | ancestors(immutable_heads().., 2)";
-    };
   };
 }
