@@ -63,4 +63,10 @@ in
         identityAgent = onePassPath;
       };
   };
+
+  services.podman = {
+    enable = true;
+    enableTypeChecks = true;
+    # settings.registries.search = ["docker.io"]
+  };
 }
