@@ -40,7 +40,7 @@ in
         # spawn git as a subprocess so that it's the one handling SSH -- otherwise
         # jj doesn't seem to pick up things like the configured ssh agent
         #
-        # seehttps://github.com/jj-vcs/jj/pull/5228
+        # see https://github.com/jj-vcs/jj/pull/5228
         git.subprocess = true;
         # put the branches created by me into a pseudo-namespace
         templates.git_push_bookmark = "'ada/push-' ++ change_id.short()";
