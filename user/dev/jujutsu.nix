@@ -15,6 +15,9 @@
         "push"
       ];
     };
+    # Prevent pushing work in progress or anything explicitly labeled "private"
+    # see https://docs.jj-vcs.dev/v0.39.0/config/#set-of-private-commits
+    git.private-commits = "description('wip:*') | description('private:*')";
     signing = {
       behavior = "own";
       backend = "ssh";
