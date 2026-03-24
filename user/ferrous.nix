@@ -42,6 +42,8 @@ in
         #
         # seehttps://github.com/jj-vcs/jj/pull/5228
         git.subprocess = true;
+        # put the branches created by me into a pseudo-namespace
+        templates.git_push_bookmark = "'ada/push-' ++ change_id.short()";
       }
     ];
   };
