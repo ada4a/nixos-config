@@ -12,4 +12,6 @@
     pkgs.cosmic-ext-applet-sysinfo
     # outputs.legacyPackages."${systemSettings.system}".clipboard-manager
   ];
+
+  hardware.system76.power-daemon.enable = true;
 }
