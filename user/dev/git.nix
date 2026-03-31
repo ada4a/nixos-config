@@ -32,7 +32,6 @@ in
     fetch = {
       prune = true;
       pruneTags = true;
-      all = true;
     };
     help.autocorrect = "prompt";
     init.defaultBranch = "main";
