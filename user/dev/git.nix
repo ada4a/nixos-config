@@ -12,7 +12,7 @@ in
   programs.git.settings = {
     user.name = userSettings.name;
     user.email = userSettings.email;
-    aliases = {
+    alias = {
       "tree" = "log --oneline --graph --color --all --decorate";
       # https://stackoverflow.com/a/7066424
       "alias" = "config --get-regexp ^alias\.";
