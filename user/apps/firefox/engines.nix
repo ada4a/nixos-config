@@ -3,6 +3,7 @@ let
   updateInterval = 24 * 60 * 60 * 1000 * 7; # every week
   conf = {
     "bing".metaData.hidden = true;
+    "perplexity".metaData.hidden = true;
     "google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
     "wikipedia".metaData.alias = "@w";
 
