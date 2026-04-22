@@ -11,6 +11,15 @@ in
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    # FIXME: remove these two after updating `home.stateVersion` to 26.05+
+    withPython3 = false;
+    withRuby = false;
+    # The two options above make home-manager write into `init.lua`,
+    # so use `initLua` to combine that with the contents we have (lazyvim bootstrap)
+    initLua = lib.mkAfter ''
+      -- bootstrap lazy.nvim, LazyVim and your plugins
+      require("config.lazy")
+    '';
   };
 
   # add words to the personal dictionary
