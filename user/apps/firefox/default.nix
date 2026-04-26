@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   userSettings,
   systemSettings,
   ...
@@ -12,6 +13,8 @@ in
   imports = [ ./engines.nix ];
 
   programs.firefox.enable = true;
+  # FIXME: remove once stateVersion is updated to 26.05+
+  programs.firefox.configPath = "${config.xdg.configHome}/mozilla/firefox";
   programs.firefox.profiles =
     let
       common = {
