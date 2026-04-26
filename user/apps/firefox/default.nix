@@ -58,9 +58,12 @@ in
         common
         {
           id = 0; # implies `isDefault = true;`
-          extensions.packages = lib.optionals (
-            systemSettings.de == "plasma"
-          ) firefox-addons.plasma-integration;
+          extensions.packages =
+            with firefox-addons;
+            [
+              quality-of-rwth
+            ]
+            ++ lib.optionals (systemSettings.de == "plasma") plasma-integration;
         }
       ];
       # should ideally have been in `ferrous.nix`, but then I wouldn't be able to access `common`
