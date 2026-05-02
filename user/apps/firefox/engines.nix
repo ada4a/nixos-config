@@ -1,7 +1,9 @@
 { userSettings, ... }:
 let
   updateInterval = 24 * 60 * 60 * 1000 * 7; # every week
-  conf = {
+in
+{
+  programs.firefox.profiles.${userSettings.username}.search.engines = {
     "bing".metaData.hidden = true;
     "perplexity".metaData.hidden = true;
     "google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
@@ -151,12 +153,5 @@ let
       inherit updateInterval;
       definedAliases = [ "@m" ];
     };
-  };
-in
-{
-  programs.firefox.profiles = {
-    ${userSettings.username}.search.engines = conf;
-    # should ideally have been in `ferrous.nix`, but then I wouldn't be able to access `common`
-    ferrous.search.engines = conf;
   };
 }
