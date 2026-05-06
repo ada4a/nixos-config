@@ -99,6 +99,7 @@
     # CLI tools
     bat
     btop
+    comma
     dust
     eza
     fastmod # interactive directory-wide search-and-replace
