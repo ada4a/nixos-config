@@ -99,11 +99,11 @@
     # CLI tools
     bat
     btop
-    eza
     dust
+    eza
     fastmod # interactive directory-wide search-and-replace
-    file
     fd
+    file
     fzf
     git
     htop
