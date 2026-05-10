@@ -9,6 +9,7 @@
     ./nix.nix
     ./desktop_environments
     ./power.nix
+    ./rustweek2026-workshop.nix
     ./steam.nix
     ./wayland.nix
   ];
