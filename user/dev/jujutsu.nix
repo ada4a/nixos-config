@@ -6,6 +6,10 @@
     user.email = userSettings.email;
     aliases = {
       # Let's use the Git backend for now
+      fetch = [
+        "git"
+        "fetch"
+      ];
       init = [
         "git"
         "init"
@@ -15,9 +19,26 @@
         "push"
       ];
     };
-    # Prevent pushing work in progress or anything explicitly labeled "private"
-    # see https://docs.jj-vcs.dev/v0.39.0/config/#set-of-private-commits
-    git.private-commits = "description('wip:*') | description('private:*')";
+    git = {
+      fetch = [
+        "origin"
+        "upstream"
+      ];
+      # Prevent pushing work in progress or anything explicitly labeled "private"
+      # see https://docs.jj-vcs.dev/v0.39.0/config/#set-of-private-commits
+      private-commits = "description('wip:*') | description('private:*')";
+    };
+
+    # Advance to the closest pushable
+    # See https://docs.jj-vcs.dev/v0.40.0/config/#bookmark-advance-default-targets
+    revset-aliases = {
+      # Closest revision that is mutable, described and either non-empty or a merge
+      "closest_pushable(to)" = ''
+        heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))
+      '';
+    };
+    revsets.bookmarks-advance-to = "closest_pushable(@)";
+
     signing = {
       behavior = "own";
       backend = "ssh";
