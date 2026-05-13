@@ -47,6 +47,20 @@ in
       ];
     };
 
+    "rustc-dev-guide" = {
+      urls = [ { template = "https://rustc-dev-guide.rust-lang.org/?search={searchTerms}"; } ];
+      icon = "https://rustc-dev-guide.rust-lang.org/favicon-de23e50b.svg";
+      inherit updateInterval;
+      definedAliases = [ "@rdg" ];
+    };
+
+    "Rust Reference" = {
+      urls = [ { template = "https://doc.rust-lang.org/stable/reference/?search={searchTerms}"; } ];
+      icon = "https://doc.rust-lang.org/stable/reference/favicon-de23e50b.svg";
+      inherit updateInterval;
+      definedAliases = [ "@ref" ];
+    };
+
     # https://github.com/opensearch.xml
     "Github" = {
       urls = [ { template = "https://github.com/search?q={searchTerms}&ref=opensearch"; } ];
@@ -128,6 +142,20 @@ in
       icon = "https://dict.leo.org/img/favicons/rude.ico";
       inherit updateInterval;
       definedAliases = [ "@leor" ];
+    };
+
+    "Reverso Context En-De" = {
+      urls = [ { template = "https://context.reverso.net/translation/english-german/{searchTerms}"; } ];
+      icon = "https://cdn.reverso.net/context/v82100/images/reverso-context.ico";
+      inherit updateInterval;
+      definedAliases = [ "@con" ];
+    };
+
+    "Reverso Context En-Ru" = {
+      urls = [ { template = "https://context.reverso.net/translation/english-russian/{searchTerms}"; } ];
+      icon = "https://cdn.reverso.net/context/v82100/images/reverso-context.ico";
+      inherit updateInterval;
+      definedAliases = [ "@conr" ];
     };
 
     "WayBack Machine" = {
