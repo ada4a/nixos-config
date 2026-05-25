@@ -13,15 +13,15 @@
       linuxHeaders
     ]
 
-    # Coverage: LLVM tools (not just clang). cargo-binutils provides an easy way to install these.
-    #
-    # Docs: https://github.com/rust-embedded/cargo-binutils
-    #
-    # Usage:
-    # ```
-    # rustup component add llvm-tools
-    # ```
-    ++ [ cargo-binutils ];
+  # Coverage: LLVM tools (not just clang). cargo-binutils provides an easy way to install these.
+  #
+  # Docs: https://github.com/rust-embedded/cargo-binutils
+  #
+  # Usage:
+  # ```
+  # rustup component add llvm-tools
+  # ```
+  ;
 
   # WASM: docker.
   # Network proxy: docker.
