@@ -55,14 +55,14 @@ in
     # - use 1password as the ssh agent
     #
     # usage example: `git clone git@fe:ferrous-systems/people`
-    matchBlocks."fe" =
+    settings."fe" =
       let
         onePassPath = "~/.1password/agent.sock";
       in
       {
-        hostname = "github.com";
-        identityFile = fkey;
-        identityAgent = onePassPath;
+        HostName = "github.com";
+        IdentityFile = fkey;
+        IdentityAgent = onePassPath;
       };
   };
 
