@@ -81,7 +81,8 @@
   };
 
   xdg.mimeApps = {
-    enable = true;
+    # cosmic's mime parser seems to struggle with the empty sections added by home-manager
+    enable = systemSettings.de != "cosmic";
     defaultApplications = {
       "text/*" = [ "nvim.desktop" ];
       "application/pdf" = [ "okular.desktop" ];
