@@ -2,7 +2,6 @@
   imports = [
     ./bluetooth.nix
     ./certificates
-    ./embedded-training.nix
     #./flatpak.nix
     ./hardware-configuration.nix
     ./maintenance.nix
