@@ -57,7 +57,6 @@ in
     # https://offby1.website/posts/stop-putting-nix-setup-in-your-checked-in-envrc-files.html
     ".envrc"
   ];
-  programs.git.lfs.enable = true;
 
   programs.fish.shellAliases = lib.mkIf cfg.enable {
     gco = "git switch";
